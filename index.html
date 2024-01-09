@@ -16,10 +16,13 @@ MK
     <meta name="author" contents="Mason Kraykovic">
     <meta name="author" contents="Quintin Qiu">
     <meta name="description" contents="The better grade manager, designed by MK, AC, SM, QQ, & DJ.">
-
-    <!-- TODO: add fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oxygen&display=swap" rel="stylesheet">
+    <!-- FONTS: Montserrat (logo, headings), Oxygen (body text)0 -->
     <link rel="stylesheet" href="./style.css">
-    <script type="module" src="./script.js"></script
+    <script type="module" src="./script.js"></script>
   </head>
   <body>
     <nav id="sidebar">
@@ -27,13 +30,28 @@ MK
     </nav>
     <main>
       <menu id="list-settings">
-        <!-- where the different viewing modes are (spreadsheet, stack), searching, filtering, etc -->
-        
+        <!-- 
+          where the different viewing modes are (spreadsheet, stack), 
+          searching, filtering, editing display order, etc 
+        -->
+        <input type="button" id="button1" />
+        <input type="checkbox" id="toggle1" />
+        <input type="radio" id="radio1" name="list-display-mode" />
       </menu>
       <h1>Classes</h1>
       <ul id="class-list">
-        <li class="class-card">
-          <h2 class="class-score">2%</h2>
+        <li class="class-card-wrapper">
+          <article class="class-card">
+            <h2 class="class-name">Honors English IX</h2>
+            <address class="class-teacher">
+              P. Randy
+            </address>
+            <h3 class="class-grade">02%</h3>
+          </article>
+          <!-- 
+            if i dont forget, there should be a prototype 
+            for the looks of this in the doc
+          -->
         </li>
       </ul>
     </main>
