@@ -32,34 +32,34 @@ MK
       <a class="class-sidebar-link">Class 1</a>
     </nav>
     <main>
-      <div id="toolbar">
-        <!-- 
-          where the different viewing modes are (spreadsheet, stack, calendar), 
-          searching, filtering, editing display order, etc 
-          this will not use <input> elems since its hard to style them (theyre self closing tags)
-          most of these will be disfunctional, since we only need to show some select features
-        -->
-        <div id="view-modes">
-          <button class="toolbar-button" id="view-mode-grid">
-            <img class="toolbar-icon" src="https://i.ibb.co/RSTcfPL/grid.png" />
-          </button>
-          <button class="toolbar-button" id="view-mode-stack">
-            <img class="toolbar-icon" src="https://i.ibb.co/ZNgY93L/table-list.png" />
-          </button>
-          <button class="toolbar-button" id="view-mode-calendar">
-            <img class="toolbar-icon" src="https://i.ibb.co/Yfq01Hr/calendar-day.png" />
-          </button>
-        </div>
-        <div id="toolbar-filter">
-          <input type="text" name="filter-input" id="filter-input" placeholder="Find Assignment" size="16" />
-          <button class="toolbar-button" id="filter-clear-button">
-            <img class="toolbar-icon" src="https://i.ibb.co/qYgHY9Q/x.png" />
-          </button>
-        </div>
-      </div>
       <section id="workplace">
         <h1>Classes</h1>
-        <ul id="class-list">
+        <div id="toolbar">
+          <!-- 
+            where the different viewing modes are (matrix, stack, calendar), 
+            searching, filtering, editing display order, etc 
+            this will not use <input> elems since its hard to style them (theyre self closing tags)
+            most of these will be disfunctional, since we only need to show some select features
+          -->
+          <div id="toolbar-view-modes">
+            <button class="toolbar-button" id="view-mode-matrix">
+              <img class="toolbar-icon" src="https://i.ibb.co/RSTcfPL/grid.png" />
+            </button>
+            <button class="toolbar-button" id="view-mode-stack">
+              <img class="toolbar-icon" src="https://i.ibb.co/ZNgY93L/table-list.png" />
+            </button>
+            <button class="toolbar-button" id="view-mode-calendar">
+              <img class="toolbar-icon" src="https://i.ibb.co/Yfq01Hr/calendar-day.png" />
+            </button>
+          </div>
+          <div id="toolbar-filter">
+            <input type="text" name="filter-input" id="filter-input" placeholder="Find Assignment" size="16" />
+            <button class="toolbar-button" id="filter-clear-button">
+              <img class="toolbar-icon" src="https://i.ibb.co/qYgHY9Q/x.png" />
+            </button>
+          </div>
+        </div>
+        <ul id="class-display-matrix">
           <li class="class-card-wrapper">
             <article class="class-card">
               <h2 class="class-name">
