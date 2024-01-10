@@ -12,13 +12,16 @@
 body {
   padding: 1rem;
   margin: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  flex: none;
   font-family: "Oxygen";
   background: var(--c1);
   color: var(--c4);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: 
+    "h h" 12%
+    "w w" 88% / 1fr 1fr;
 }
 h1, h2, h3, h4 {
   font-family: Montserrat;
@@ -29,13 +32,54 @@ a {
   text-decoration: unset;
   color: var(--c4);
 }
-ul {
+header {
+  grid-area: h;
+  background: green;
+}
+
+.toolbar-button {
+  width: 3rem;
+  height: 3rem;
+  background: blue;
+}
+.toolbar-icon {
+  width: 3rem;
+  height: 3rem;
+}
+#toolbar {
+  width: 60rem;
+  height: 4rem;
+  background: green;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#toolbar-view-modes {
+  width: 6rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+}
+#toolbar-filter {
+  width: 10rem;
+  height: 4rem;
+}
+#filter-input {
+  
+}
+
+#workplace {
+  grid-area: w;
+  background: grey;
+  overflow: auto;
+}
+#class-display-matrix {
   margin: 0;
   padding: 0 1rem;
   list-style-type: none;
-  height: 6rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  background: orange;
 }
 .class-card {
   min-width: 16rem;
