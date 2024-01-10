@@ -9,8 +9,8 @@
   --cyellow: rgb(1 1 1); /* 70-79% */
   --cred: rgb(1 1 1); /* <70% */
 }
-body {
-  padding: 1rem;
+html, body {
+  padding: 0;
   margin: 0;
   font-family: "Oxygen";
   background: var(--c1);
@@ -38,6 +38,7 @@ header {
 }
 
 .toolbar-button {
+  all: unset;
   width: 3rem;
   height: 3rem;
   background: blue;
@@ -47,21 +48,22 @@ header {
   height: 3rem;
 }
 #toolbar {
-  width: 60rem;
+  width: 80%;
   height: 4rem;
   background: green;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 #toolbar-view-modes {
-  width: 6rem;
+  width: 15rem;
   height: 4rem;
   display: flex;
   flex-direction: row;
 }
 #toolbar-filter {
-  width: 10rem;
+  width: 25rem;
   height: 4rem;
 }
 #filter-input {
