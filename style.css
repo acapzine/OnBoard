@@ -45,6 +45,7 @@ main {
   background: purple;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .toolbar-button {
   all: unset;
@@ -67,18 +68,19 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 #toolbar-view-modes {
-  width: 10rem;
   height: 2rem;
   display: flex;
   flex-direction: row;
+  gap: 1rem;
 }
 #toolbar-filter {
-  width: 14rem;
   height: 2rem;
   display: flex;
   flex-direction: row;
+  gap: 1rem;
 }
 #filter-input {
   all: unset;
@@ -90,6 +92,8 @@ main {
 #workplace {
   background: grey;
   overflow: auto;
+  width: 100%;
+  height: 100%;
 }
 #workspace-prelude {
   width: 100%;
@@ -100,13 +104,17 @@ main {
 }
 #class-display-matrix {
   margin: 0;
-  padding: 0 1rem;
+  padding: 0;
   list-style-type: none;
   display: flex;
   flex-direction: row;
   width: 100%;
   height: auto;
   background: orange;
+}
+.class-card-assignment-list {
+  list-style-type: inside;
+  padding-left: 0;
 }
 .class-card {
   min-width: 16rem;
