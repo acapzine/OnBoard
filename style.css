@@ -9,6 +9,7 @@
   --cyellow: rgb(1 1 1); /* 70-79% */
   --cred: rgb(1 1 1); /* <70% */
 }
+
 html, body {
   padding: 0;
   margin: 0;
@@ -55,38 +56,43 @@ main {
   align-items: center;
   justify-content: center;
   background: blue;
+  position: relative;
+  border-radius: .5rem;
+  border: .3rem solid grey;
 }
 .toolbar-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+  position: relative;
 }
 #toolbar {
-  width: 80%;
+  padding: 0 .5rem;
   height: 2.5rem;
   background: green;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: .5rem;
 }
 #toolbar-view-modes {
   height: 2rem;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: .5rem;
 }
 #toolbar-filter {
   height: 2rem;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: .5rem;
 }
 #filter-input {
   all: unset;
   width: 8rem;
   height: 2rem;
   background: yellow;
+  padding: 0 .5rem;
 }
 
 #workplace {
