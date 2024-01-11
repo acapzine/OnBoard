@@ -21,8 +21,8 @@ html, body {
   height: 100svh;
   display: grid;
   grid-template: 
-    "a a" 12%
-    "b c" 88% / 1fr 6fr;
+    "a a" 3rem
+    "b c" calc(100% - 3rem) / 1fr 6fr;
 }
 h1, h2, h3, h4 {
   font-family: Montserrat;
@@ -50,24 +50,24 @@ main {
 }
 .toolbar-button {
   all: unset;
-  width: 2rem;
-  height: 2rem;
+  width: 1.4rem;
+  height: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: blue;
   position: relative;
-  border-radius: .5rem;
-  border: .3rem solid grey;
+  border-radius: .6rem;
+  border: .1rem solid grey;
 }
 .toolbar-icon {
-  max-width: 1.5rem;
-  max-height: 1.5rem;
+  max-width: 1rem;
+  max-height: 1rem;
   position: relative;
 }
 #toolbar {
   padding: 0 .5rem;
-  height: 2.5rem;
+  height: 1.8rem;
   background: green;
   display: flex;
   flex-direction: row;
