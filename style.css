@@ -74,24 +74,24 @@ main {
   justify-content: space-between;
   gap: .5rem;
 }
-#toolbar-view-modes {
+.toolbar-section {
   height: 2rem;
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: .5rem;
   flex-wrap: wrap;
 }
+#toolbar-view-modes {
+  
+}
 #toolbar-filter {
-  height: 2rem;
-  display: flex;
-  flex-direction: row;
-  gap: .5rem;
-  flex-wrap: wrap;
+  
 }
 #filter-input {
   all: unset;
   width: 8rem;
-  height: 2rem;
+  height: 1.4rem;
   background: yellow;
   padding: 0 .5rem;
 }
