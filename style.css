@@ -47,6 +47,7 @@ main {
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: scroll;
 }
 .toolbar-button {
   all: unset;
@@ -98,7 +99,7 @@ main {
 
 #workplace {
   background: grey;
-  overflow: auto;
+  overflow: scroll;
   width: 100%;
   height: 100%;
   display: flex;
