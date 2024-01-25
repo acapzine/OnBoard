@@ -22,20 +22,20 @@ div.content:after {
 
 div.header {
   text-align: -webkit-center;
-  background-color: #fff;
+  background-color: #fffff;
   padding: 12px;
 }
 div.nav {
   overflow: hidden;
-  background-color: #000;
+  background-color: #00000;
 }
 div.nav a {
   padding: 12px;
   float: left;
   text-align: center;
-  background-color: #000;
+  background-color: #00000;
   text-decoration: none;
-  color: #fff;
+  color: #fffff;
 }
 div.nav a:hover {
   background-color: red;
