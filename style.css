@@ -1,3 +1,40 @@
 * {
   font-family: Arial, helvetica, sans-serif;
 }
+
+body {
+  background-color: #fff;
+}
+div.content {
+  float: left;
+}
+span.row {
+  float: left;
+  width: 33.3%;
+}
+div.content:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+div.header {
+  text-align: -webkit-center;
+  background-color: #fff;
+  padding: 12px;
+}
+div.nav {
+  overflow: hidden;
+  background-color: #000;
+}
+div.nav a {
+  padding: 12px;
+  float: left;
+  text-align: center;
+  background-color: #000;
+  text-decoration: none;
+  color: #fff;
+}
+div.nav a:hover {
+  background-color: darkred;
+}
