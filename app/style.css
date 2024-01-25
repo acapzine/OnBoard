@@ -1,9 +1,9 @@
 :root {
-    --c1: #c76b97ff;
-    --c2: #8f6873ff;
-    --c3: #77636aff;
-    --c4: #565651ff;
-    --c5: #3b3936ff;
+    --c1: #383838;
+    --c2: #a1a1a1;
+    --c3: #d3d3d3;
+    --c4: #646464;
+    --c5: #c2c2c2;
     /* body text */
     --ctext: rgb(65, 58, 70);
     /* header text */
@@ -12,6 +12,7 @@
     --cgreen: rgb(39, 103, 43); /* 80-89% */
     --cyellow: rgb(218, 200, 2); /* 70-79% */
     --cred: rgb(153, 0, 0); /* <70% */
+    --ctoolbar: rgb(0 0 0 / .25);
   }
   
   html, body {
@@ -79,6 +80,7 @@
     align-items: center;
     justify-content: space-between;
     gap: .5rem;
+    background: var(--ctoolbar);
   }
   .toolbar-section {
     height: 2rem;
