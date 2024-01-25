@@ -1,336 +1,37 @@
 <!DOCTYPE html>
 <!--
-hey there! this is the beginning of our *home page*.
-any data you want added to this should either be submitted to MK & QQ yourself or submitted in a pull request
-thanks
-MK
-
-(also, please use your alias [the thing with your initials] rather than your name during the development of this website with the exclusion of the author metadata)
+Hey! This is how we're redoing the homepage as.. well.. the demo shouldn't really be the homepage.
+Generally, it should be [MK] who is doing the works here; though, others are welcome to assist if they have the knowledge to do so.
 -->
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>OnBoard | Your better grade manager</title>
-    <meta name="author" content="Mason Kraykovic">
-    <meta name="author" content="Quintin Qiu">
-    <meta name="description" content="The better grade manager, designed by MK, AC, SM, QQ, & DJ.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oxygen&display=swap" rel="stylesheet">
-    <!-- FONTS: Montserrat (logo, headings), Oxygen (body text) -->
-    
-    <!-- css dependencies -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gardevoir" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cssremedy@0.1.0-beta.2/css/remedy.min.css" />
-    
-    <link rel="stylesheet" href="./style.css">
-    <script type="module" src="./script.js"></script>
+    <title>OnBoard | Your Better Grade Manager</title>
+    <meta name="author" content="MK">
+    <meta name="description" content="The homepage for the English project known as 'OnBoard'">
+    <script src="index.js"></script>
+    <link type="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <!-- account, add class, etc -->
-    </header>
-    <nav id="sidebar">
-      <a class="sidebar-link">Home</a>
-      <a class="sidebar-link">Assignments</a>
-      <a class="sidebar-link">Grades</a>
-      <a class="sidebar-link class-sidebar-dropdown">Classes</a>
-      <a class="sidebar-link">Notifications</a>
-      <a class="sidebar-link">Messages</a>
-      <a class="sidebar-link">Information</a>
-      <a class="sidebar-link">Settings</a>
-      <a class="sidebar-link">Help</a>
-    </nav>
-    <main>
-      <section id="workplace">
-        <div id="workspace-prelude">
-          <h1>Classes</h1>
-          <div id="toolbar">
-            <!-- 
-              where the different viewing modes are (matrix, stack, calendar), 
-              searching, filtering, editing display order, etc 
-              this will not use <input> elems since its hard to style them (theyre self closing tags)
-              most of these will be disfunctional, since we only need to show some select features
-            -->
-            <div class="toolbar-section" id="toolbar-view-modes">
-              <button class="toolbar-button" id="view-mode-matrix">
-                <img class="toolbar-icon" src="https://i.ibb.co/RSTcfPL/grid.png" />
-              </button>
-              <button class="toolbar-button" id="view-mode-stack">
-                <img class="toolbar-icon" src="https://i.ibb.co/ZNgY93L/table-list.png" />
-              </button>
-              <button class="toolbar-button" id="view-mode-calendar">
-                <img class="toolbar-icon" src="https://i.ibb.co/Yfq01Hr/calendar-day.png" />
-              </button>
-            </div>
-            <div class="toolbar-section" id="toolbar-filter">
-              <input type="text" name="filter-input" id="filter-input" placeholder="Find Assignment" size="16" />
-              <button class="toolbar-button" id="filter-clear-button">
-                <img class="toolbar-icon" src="https://i.ibb.co/qYgHY9Q/x.png" />
-              </button>
-            </div>
-            <div class="toolbar-section" id="toolbar-meta">
-              <button class="toolbar-button" id="edit-ui-button">
-                <img class="toolbar-icon" src="https://i.ibb.co/b3sQG0N/pencil.png" />
-              </button>
-              <button class="toolbar-button" id="settings-button">
-                <img class="toolbar-icon" src="https://i.ibb.co/YNgS8QY/settings-sliders.png" />
-              </button>
-              <button class="toolbar-button" id="special-button">
-                <img class="toolbar-icon" src="https://i.ibb.co/KLLnGsG/crown.png" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <ul id="class-display-matrix">
-          
-          <li class="class-card-wrapper">
-            <article class="class-card">
-              <h2 class="class-name">
-                Algebreic Concepts
-              </h2>
-              <ul class="class-card-assignment-list">
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 1 - Due in 2 days (10/11/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 2 - Due in 3 days (10/12/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 3 - Due in 5 days (10/14/12)</a>
-                </li>
-              </ul>
-              <div class="class-card-bottom">
-                <h4 class="class-teacher">
-                  Dr. John Doe
-                </h4>
-                <h3 class="class-score">
-                99%
-                </h3>
-              </div>
-            </article>
-          </li>
-          
-          <li class="class-card-wrapper">
-            <article class="class-card">
-              <h2 class="class-name">
-                Algebreic Concepts
-              </h2>
-              <ul class="class-card-assignment-list">
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 1 - Due in 2 days (10/11/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 2 - Due in 3 days (10/12/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 3 - Due in 5 days (10/14/12)</a>
-                </li>
-              </ul>
-              <div class="class-card-bottom">
-                <h4 class="class-teacher">
-                  Dr. John Doe
-                </h4>
-                <h3 class="class-score">
-                99%
-                </h3>
-              </div>
-            </article>
-          </li>
-          
-          <li class="class-card-wrapper">
-            <article class="class-card">
-              <h2 class="class-name">
-                Algebreic Concepts
-              </h2>
-              <ul class="class-card-assignment-list">
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 1 - Due in 2 days (10/11/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 2 - Due in 3 days (10/12/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 3 - Due in 5 days (10/14/12)</a>
-                </li>
-              </ul>
-              <div class="class-card-bottom">
-                <h4 class="class-teacher">
-                  Dr. John Doe
-                </h4>
-                <h3 class="class-score">
-                99%
-                </h3>
-              </div>
-            </article>
-          </li>
-          
-          <li class="class-card-wrapper">
-            <article class="class-card">
-              <h2 class="class-name">
-                Algebreic Concepts
-              </h2>
-              <ul class="class-card-assignment-list">
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 1 - Due in 2 days (10/11/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 2 - Due in 3 days (10/12/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 3 - Due in 5 days (10/14/12)</a>
-                </li>
-              </ul>
-              <div class="class-card-bottom">
-                <h4 class="class-teacher">
-                  Dr. John Doe
-                </h4>
-                <h3 class="class-score">
-                99%
-                </h3>
-              </div>
-            </article>
-          </li>
-          
-          <li class="class-card-wrapper">
-            <article class="class-card">
-              <h2 class="class-name">
-                Algebreic Concepts
-              </h2>
-              <ul class="class-card-assignment-list">
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 1 - Due in 2 days (10/11/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 2 - Due in 3 days (10/12/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 3 - Due in 5 days (10/14/12)</a>
-                </li>
-              </ul>
-              <div class="class-card-bottom">
-                <h4 class="class-teacher">
-                  Dr. John Doe
-                </h4>
-                <h3 class="class-score">
-                99%
-                </h3>
-              </div>
-            </article>
-          </li>
-          
-          <li class="class-card-wrapper">
-            <article class="class-card">
-              <h2 class="class-name">
-                Algebreic Concepts
-              </h2>
-              <ul class="class-card-assignment-list">
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 1 - Due in 2 days (10/11/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 2 - Due in 3 days (10/12/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 3 - Due in 5 days (10/14/12)</a>
-                </li>
-              </ul>
-              <div class="class-card-bottom">
-                <h4 class="class-teacher">
-                  Dr. John Doe
-                </h4>
-                <h3 class="class-score">
-                99%
-                </h3>
-              </div>
-            </article>
-          </li>
-          
-          <li class="class-card-wrapper">
-            <article class="class-card">
-              <h2 class="class-name">
-                Algebreic Concepts
-              </h2>
-              <ul class="class-card-assignment-list">
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 1 - Due in 2 days (10/11/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 2 - Due in 3 days (10/12/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 3 - Due in 5 days (10/14/12)</a>
-                </li>
-              </ul>
-              <div class="class-card-bottom">
-                <h4 class="class-teacher">
-                  Dr. John Doe
-                </h4>
-                <h3 class="class-score">
-                99%
-                </h3>
-              </div>
-            </article>
-          </li>
-          
-          <li class="class-card-wrapper">
-            <article class="class-card">
-              <h2 class="class-name">
-                Algebreic Concepts
-              </h2>
-              <ul class="class-card-assignment-list">
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 1 - Due in 2 days (10/11/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 2 - Due in 3 days (10/12/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 3 - Due in 5 days (10/14/12)</a>
-                </li>
-              </ul>
-              <div class="class-card-bottom">
-                <h4 class="class-teacher">
-                  Dr. John Doe
-                </h4>
-                <h3 class="class-score">
-                99%
-                </h3>
-              </div>
-            </article>
-          </li>
-          
-          <li class="class-card-wrapper">
-            <article class="class-card">
-              <h2 class="class-name">
-                Algebreic Concepts
-              </h2>
-              <ul class="class-card-assignment-list">
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 1 - Due in 2 days (10/11/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 2 - Due in 3 days (10/12/12)</a>
-                </li>
-                <li class="class-card-assignment-list-elem">
-                  <a href="#">Assignment 3 - Due in 5 days (10/14/12)</a>
-                </li>
-              </ul>
-              <div class="class-card-bottom">
-                <h4 class="class-teacher">
-                  Dr. John Doe
-                </h4>
-                <h3 class="class-score">
-                99%
-                </h3>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </section>
-    </main>
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="#">Demo Student</a>
+      <a href="#">Demo Teacher</a>
+    </div>
+    <div class="nav">
+      <h1>Header</h1>
+    </div>
+    <div class="content">
+      <span class="row">
+        <h2>What is OnBoard?</h2>
+        <p>OnBoard is a grade management program developed by five students as a substitute for other grade management solutions that were inneffective, slow, and completely disruptive to a student's learning process.</p>
+      </span>
+      <span class="row">
+        <h2>Why should I choose OnBoard?</h2>
+        <p>Since its creation, over 92% of <em>western</em> Pennsylvania has chosen OnBoard to be their <b>better grade manager</b>. We hope to further expand our outreach and eventually be used by 100% of Pennsylvanian school districts—maybe even the whole U.S.!</p>
+      </span>
+      <span class="row">
+        <h2>What does OnBoard have that could be greater than our current solution?</h2>
+        <p>OnBoard has many features that make our program greater than the rest, such as Google Workspace incorporation, flexible homework passes, teacher-regulated student group chats, and so many more! We hope you choose OnBoard to further our goals</p>
+    </div>
   </body>
 </html>
