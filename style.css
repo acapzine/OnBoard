@@ -7,29 +7,29 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-family: Montserrat, sans-serif;
 }
-div.content {
+.content {
   float: left;
 }
 span.row {
   float: left;
   width: 33.3%;
 }
-div.content:after {
+.content:after {
   content: "";
   clear: both; /* interesting (clear and tables have not been used ever since the middle ages, you should try using flexbox https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) | y'know-i really dont ****ing care!*/
   display: table;
 }
 
-div.header {
+.header {
   text-align: -webkit-center;
   background-color: #fffff;
   padding: 12px;
 }
-div.nav {
+.nav {
   overflow: hidden;
   background-color: #00000;
 }
-div.nav a {
+.nav a {
   padding: 12px;
   float: left;
   text-align: center;
@@ -37,6 +37,6 @@ div.nav a {
   text-decoration: none;
   color: #fffff;
 }
-div.nav a:hover {
+.nav a:hover {
   background-color: red;
 }
