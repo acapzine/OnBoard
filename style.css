@@ -1,9 +1,11 @@
-* {
-  font-family: Arial, helvetica, sans-serif;
-}
-
-body {
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: Oxygen, helvetica, sans-serif;
   background-color: #fff;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat, sans-serif;
 }
 div.content {
   float: left;
@@ -14,7 +16,7 @@ span.row {
 }
 div.content:after {
   content: "";
-  clear: both;
+  clear: both; /* interesting (clear and tables have not been used ever since the middle ages, you should try using flexbox https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) */
   display: table;
 }
 
