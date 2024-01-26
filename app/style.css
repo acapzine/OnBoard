@@ -1,18 +1,18 @@
 :root {
-    --c1: #383838;
+    --c1: #626262;
     --c2: #a1a1a1;
     --c3: #d3d3d3;
-    --c4: #646464;
+    --c4: #8d8d8d;
     --c5: #c2c2c2;
     /* body text */
-    --ctext: rgb(65, 58, 70);
+    --ctext: rgb(46, 46, 46);
     /* header text */
     --cheader: rgb(32, 21, 35);
     --cblue: rgb(46, 39, 122); /* 90+% */
     --cgreen: rgb(39, 103, 43); /* 80-89% */
     --cyellow: rgb(218, 200, 2); /* 70-79% */
     --cred: rgb(153, 0, 0); /* <70% */
-    --ctoolbar: rgb(0 0 0 / .25);
+    --ctoolbar: rgb(0 0 0 / .15);
   }
   
   html, body {
@@ -28,14 +28,10 @@
       "a a" 4rem
       "b c" calc(100% - 4rem) / 10rem 1fr;
   }
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, .text-logo {
     font-family: Montserrat;
     font-weight: 700;
     color: var(--cheader);
-  }
-  a {
-    text-decoration: unset;
-    color: var(--c4);
   }
   header {
     grid-area: a;
@@ -57,12 +53,13 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    color: var(--ctext);
   }
   .sidebar-link:not(:last-child)::after {
     content: "";
     width: 30%;
     min-height: 1px;
-    background: grey;
+    background: var(--ctext);
     display: block;
     margin: 0.8rem;
     border-radius: 2rem;
@@ -84,7 +81,7 @@
     position: relative;
   }
   .toolbar-button-focused {
-    background: rgb(0 0 0 / .1);
+    background: var(--c1);
     border-radius: 3px;
   }
   .toolbar-icon {
@@ -102,8 +99,8 @@
     justify-content: space-between;
     background: var(--ctoolbar);
     position: relative;
-    top: 3rem;
     border-radius: .4rem;
+    border: 2px solid var(--c1);
   }
   .toolbar-section {
     height: 2rem;
@@ -118,7 +115,7 @@
     content:  "";
     width: .15rem;
     height: 60%;
-    background: var(--c3);
+    background: var(--ctoolbar);
     border-radius: 1rem;
     margin: 0 .5rem;
   }
@@ -129,7 +126,6 @@
     
   }
   #filter-input {
-    background: var(--ctoolbar);
     all: unset;
     width: 8rem;
     height: 1.4rem;
