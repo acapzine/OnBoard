@@ -174,7 +174,7 @@
   .class-card-assignment-list-elem {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: .5rem 1rem;
   }
   .class-card-assignment-list-subsection {
     
@@ -200,6 +200,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
+  }
+  .class-card-top {
+    border: var(--c1) 4px solid;
   }
   .class-card-bottom {
     width: 100%;
