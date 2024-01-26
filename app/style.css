@@ -47,8 +47,25 @@
     flex-direction: column;
     align-items: center;
     background: var(--c2);
-    padding: 1rem;
+    padding: 2rem 1rem;
     gap: 1rem;
+    overflow: scroll;
+  }
+  .sidebar-link {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .sidebar-link:not(:last-child)::after {
+    content: "";
+    width: 30%;
+    min-height: 1px;
+    background: grey;
+    display: block;
+    margin: 0.8rem;
+    border-radius: 2rem;
   }
   main {
     grid-area: c;
@@ -66,6 +83,10 @@
     justify-content: center;
     position: relative;
   }
+  .toolbar-button-focused {
+    background: rgb(0 0 0 / .1);
+    border-radius: 3px;
+  }
   .toolbar-icon {
     max-width: 1rem;
     max-height: 1rem;
@@ -73,14 +94,16 @@
     opacity: .7;
   }
   #toolbar {
-    padding: 0 .5rem;
-    height: 1.8rem;
+    padding: 0 1rem;
+    height: 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: .5rem;
     background: var(--ctoolbar);
+    position: relative;
+    top: 3rem;
+    border-radius: .4rem;
   }
   .toolbar-section {
     height: 2rem;
@@ -96,7 +119,8 @@
     width: .15rem;
     height: 60%;
     background: var(--c3);
-    border-radius:  1rem;
+    border-radius: 1rem;
+    margin: 0 .5rem;
   }
   #toolbar-view-modes {
     
@@ -105,11 +129,12 @@
     
   }
   #filter-input {
+    background: var(--ctoolbar);
     all: unset;
     width: 8rem;
     height: 1.4rem;
     padding: 0 .5rem;
-    color: black;
+    color: var(--ctext);
   }
   
   #workplace {
@@ -120,11 +145,13 @@
   }
   #workspace-prelude {
     width: 100%;
-    height: 9rem;
+    height: 15rem;
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     background: var(--c4);
+    overflow: scroll;
   }
   #class-display-matrix {
     margin: 0;
@@ -135,7 +162,7 @@
     width: 100%;
     min-height: calc(100% - 9rem);
     background: var(--c5);
-    overflow: scroll;
+    overflow-y: scroll;
     flex-wrap: wrap;
     gap: 1.5rem;
   }

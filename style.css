@@ -22,20 +22,20 @@ span.row {
 
 .header {
   text-align: -webkit-center;
-  background-color: #fffff;
+  background-color: #ffffff;
   padding: 12px;
 }
 .nav {
   overflow: hidden;
-  background-color: #00000;
+  background-color: #000000;
 }
 .nav a {
   padding: 12px;
   float: left;
   text-align: center;
-  background-color: #00000;
+  background-color: #000000;
   text-decoration: none;
-  color: #fffff;
+  color: #ffffff;
 }
 .nav a:hover {
   background-color: red;
