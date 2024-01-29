@@ -2,7 +2,7 @@
   --c1: #626262;
   --c2: #a1a1a1;
   --c3: #b6b6b6;
-  --c4: #8d8d8d;
+  --c4: #e6e6e6;
   --c5: #c2c2c2;
   --c6: #abcdef;
   /* body text */
@@ -43,7 +43,9 @@ h4 {
   font-weight: normal;
   color: var(--cheader);
 }
-
+h1 {
+  font-size: 2.75rem;
+}
 a {
   color: var(--ctext);
 }
@@ -62,7 +64,7 @@ header {
 }
 
 #profile-picture {
-  height: 80%;
+  height: 60%;
   aspect-ratio: 1;
   border-radius: 99rem;
 }
@@ -107,8 +109,8 @@ main {
 
 .toolbar-button {
   all: unset;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,12 +126,11 @@ main {
   max-width: 1rem;
   max-height: 1rem;
   position: relative;
-  opacity: .7;
 }
 
 #toolbar {
   padding: 0 1rem;
-  height: 2rem;
+  height: 2.2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -138,6 +139,7 @@ main {
   position: relative;
   border-radius: .4rem;
   border: 2px solid var(--c1);
+  opacity: .8;
 }
 
 .toolbar-section {
@@ -246,6 +248,8 @@ main {
   border: var(--c4) 3px solid;
   border-radius: 1rem;
   background: var(--c3);
+  height: 12rem;
+  overflow: scroll;
 }
 
 .class-card-bottom {
