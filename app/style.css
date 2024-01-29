@@ -13,7 +13,7 @@
   /* 90+% */
   --cgreen: rgb(39, 103, 43);
   /* 80-89% */
-  --cyellow: rgb(218, 200, 2);
+  --cyellow: rgb(246 255 21);
   /* 70-79% */
   --cred: rgb(153, 0, 0);
   /* <70% */
@@ -76,7 +76,7 @@ header {
   align-items: center;
   background: var(--c2);
   padding: 2rem 1rem;
-  gap: 1rem;
+  gap: .75rem;
   overflow: scroll;
 }
 
@@ -96,6 +96,7 @@ header {
   background: var(--ctext);
   display: block;
   margin: 0.8rem;
+  margin-top: 1.5rem;
   border-radius: 2rem;
 }
 
@@ -171,6 +172,7 @@ main {
   height: 1.4rem;
   padding: 0 .5rem;
   color: var(--ctext);
+  cursor: pointer;
 }
 
 #workplace {
@@ -282,5 +284,5 @@ main {
   padding: 1em;
   right: 0;
   bottom: 0;
-  color: var(--cblue);
+  font-weight: bold;
 }

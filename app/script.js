@@ -17,6 +17,15 @@ const assignments = [
     "Project",
     "Analysis"
 ];
+const titles = [
+    "Mr.",
+    "Mr.",
+    "Mr.",
+    "Ms.",
+    "Mrs.",
+    "Mrs.",
+    "Dr."
+];
 for (let i = 0; i < 8; i++) {
     const newNode = document.querySelector(".class-card-wrapper").cloneNode(true);
     newNode.querySelector(".class-name").textContent = [
@@ -37,7 +46,7 @@ for (let i = 0; i < 8; i++) {
         elem.textContent = assignments[randNum(assignments.length - 1)];
     });
     document.querySelector("#class-display-matrix").appendChild(newNode);
-    newNode.querySelector(".class-teacher").textContent = faker.name.firstName() + " " + faker.name.lastName();
+    newNode.querySelector(".class-teacher").textContent = titles[randNum(titles.length - 1)] + " " + faker.name.lastName();
 
     const score = (randNum(50) + 50);
     newNode.querySelector(".class-score").textContent = score + "%";
