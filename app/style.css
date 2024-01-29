@@ -4,7 +4,7 @@
   --c3: #b6b6b6;
   --c4: #e6e6e6;
   --c5: #c2c2c2;
-  --c6: #abcdef;
+  --c6: #757575;
   /* body text */
   --ctext: rgb(46, 46, 46);
   /* header text */
@@ -207,18 +207,23 @@ main {
 
 .class-card-assignment-list {
   list-style-type: none;
-  padding: 0 1rem;
-  overflow: scroll;
+  padding: 0 1rem 1rem 1rem;
   flex: 1 0 auto;
 }
 
 .class-card-assignment-list-elem {
   display: flex;
   flex-direction: column;
-  padding: .5rem 1rem;
+  padding: 0;
 }
 
-.class-card-assignment-list-subsection {}
+.class-card-assignment-list-subsection {
+  padding: 0 1rem;
+  list-style-type: "-  ";
+}
+.class-card-assignment-list-subsection-title {
+  padding: 0.5rem 0;
+}
 
 .class-card {
   min-width: 16rem;
@@ -231,7 +236,7 @@ main {
   border-radius: 1rem;
   overflow: hidden;
   border: .4rem solid var(--c2);
-  outline: var(--c4) 3px solid;
+  outline: var(--c6) 3px solid;
   box-shadow: 4px 4px 1em 0px var(--c1);
 }
 
@@ -245,7 +250,7 @@ main {
 }
 
 .class-card-top {
-  border: var(--c4) 3px solid;
+  border: var(--c6) 3px solid;
   border-radius: 1rem;
   background: var(--c3);
   height: 12rem;
