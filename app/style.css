@@ -1,7 +1,7 @@
 :root {
   --c1: #626262;
   --c2: #a1a1a1;
-  --c3: #d3d3d3;
+  --c3: #b6b6b6;
   --c4: #8d8d8d;
   --c5: #c2c2c2;
   --c6: #abcdef;
@@ -53,8 +53,8 @@ header {
   background: var(--c1);
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 0 2rem;
+  justify-content: space-between;
+  padding: 0 3rem;
 }
 
 #logo {
@@ -191,7 +191,7 @@ main {
 
 #class-display-matrix {
   margin: 0;
-  padding: 1.5rem;
+  padding: 3rem;
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -200,7 +200,7 @@ main {
   background: var(--c5);
   overflow-y: scroll;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
 .class-card-assignment-list {
@@ -228,8 +228,9 @@ main {
   justify-content: space-between;
   border-radius: 1rem;
   overflow: hidden;
-  border: 3px solid var(--c2);
-  outline: var(--c4) 4px solid;
+  border: .4rem solid var(--c2);
+  outline: var(--c4) 3px solid;
+  box-shadow: 4px 4px 1em 0px var(--c1);
 }
 
 .class-name {
