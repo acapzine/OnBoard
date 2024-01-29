@@ -287,4 +287,5 @@ main {
   right: 0;
   bottom: 0;
   font-weight: bold;
+  color: var(--cblue);
 }
