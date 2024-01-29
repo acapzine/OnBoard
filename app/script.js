@@ -30,9 +30,9 @@ for (let i = 0; i < 9; i++) {
         "Contemporary Art"
     ][i];
     newNode.querySelectorAll(".class-card-assignment-list-subsection-title").forEach((elem, elemNum) => {
-        elem.textContent = `Due in ${[
-            (2 + (2 * i % 6)) + elemNum * 2 // random formula i made up on the spot
-        ][i]} days`;
+        elem.textContent = `Due in ${
+            (randNum(2) + (2 * i % 3 + randNum(3))) + elemNum * randNum(2) // random formula i made up on the spot
+        } days`;
     });
     newNode.querySelectorAll(".class-card-assignment-list-subsection-elem > a").forEach(elem => {
         elem.textContent = assignments[randNum(assignments.length - 1)];
