@@ -254,7 +254,9 @@ main {
   border-radius: 1rem;
   background: var(--c3);
   height: 12rem;
+  width: 16rem;
   overflow: scroll;
+  padding-top: 1rem;
 }
 
 .class-card-bottom {

@@ -17,7 +17,7 @@ const assignments = [
     "Project",
     "Analysis"
 ];
-for (let i = 0; i < 9; i++) {
+for (let i = 0; i < 8; i++) {
     const newNode = document.querySelector(".class-card-wrapper").cloneNode(true);
     newNode.querySelector(".class-name").textContent = [
         "AP Language V",
@@ -30,9 +30,8 @@ for (let i = 0; i < 9; i++) {
         "Contemporary Art"
     ][i];
     newNode.querySelectorAll(".class-card-assignment-list-subsection-title").forEach((elem, elemNum) => {
-        elem.textContent = `Due in ${
-            (randNum(2) + (2 * i % 3 + randNum(3))) + elemNum * randNum(2) // random formula i made up on the spot
-        } days`;
+        let dueDate = 3 + (2 * i % 3) + elemNum * (1 + randNum(2));
+        elem.textContent = `Due in ${dueDate} day${dueDate == 1 ? "s" : ""}`;
     });
     newNode.querySelectorAll(".class-card-assignment-list-subsection-elem > a").forEach(elem => {
         elem.textContent = assignments[randNum(assignments.length - 1)];
