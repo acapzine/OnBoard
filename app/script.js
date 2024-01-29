@@ -41,9 +41,9 @@ for (let i = 0; i < 9; i++) {
     newNode.querySelector(".class-teacher").textContent = faker.name.firstName() + " " + faker.name.lastName();
 
     const score = (randNum(50) + 50);
-    newNode.querySelector(".class-teacher").textContent = score + "%";
+    newNode.querySelector(".class-score").textContent = score + "%";
     // ternary hell my beloved
-    newNode.querySelector(".class-teacher").style.color = score >= 90 
+    newNode.querySelector(".class-score").style.color = score >= 90 
         ? "var(--cblue)"
         : score >= 80
             ? "var(--cgreen)"
