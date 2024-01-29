@@ -87,6 +87,7 @@ header {
   align-items: center;
   width: 100%;
   color: var(--ctext);
+  text-decoration: none;
 }
 
 .sidebar-link:not(:last-child)::after {
@@ -98,6 +99,7 @@ header {
   margin: 0.8rem;
   margin-top: 1.5rem;
   border-radius: 2rem;
+  cursor: default;
 }
 
 main {
@@ -157,7 +159,7 @@ main {
   content: "";
   width: .15rem;
   height: 60%;
-  background: var(--ctoolbar);
+  background: var(--c1);
   border-radius: 1rem;
   margin: 0 .5rem;
 }
