@@ -1,7 +1,8 @@
 // enjoy some ugly js
 
 // used for fake names and stuff
-import { faker } from "https://cdn.skypack.dev/@faker-js/faker";
+import faker from 'https://esm.run/@luckyluu/fakerjs';
+
 const randNum = upperBoundInclusive => Math.floor(Math.random() * (upperBoundInclusive + 1));
 const assignments = [
     "Homework",
@@ -15,7 +16,7 @@ const assignments = [
     "Presentation",
     "Project",
     "Analysis"
-]
+];
 for (let i = 0; i < 9; i++) {
     const newNode = document.querySelector(".class-card-wrapper").cloneNode(true);
     newNode.querySelector(".class-name").textContent = [
@@ -35,9 +36,9 @@ for (let i = 0; i < 9; i++) {
     });
     newNode.querySelectorAll(".class-card-assignment-list-subsection-elem > a").forEach(elem => {
         elem.textContent = assignments[randNum(assignments.length - 1)];
-    })
+    });
     document.querySelector("#class-display-matrix").appendChild(newNode);
-    newNode.querySelector(".class-teacher").textContent = faker.person.fullName();
+    newNode.querySelector(".class-teacher").textContent = faker.name.firstName() + " " + faker.name.lastName();
 
     const score = (randNum(50) + 50);
     newNode.querySelector(".class-teacher").textContent = score + "%";
