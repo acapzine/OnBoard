@@ -24,7 +24,9 @@ const titles = [
     "Ms.",
     "Mrs.",
     "Mrs.",
-    "Dr."
+    "Dr.",
+    "Dr.",
+    "Sir",
 ];
 for (let i = 0; i < 8; i++) {
     const newNode = document.querySelector(".class-card-wrapper").cloneNode(true);
