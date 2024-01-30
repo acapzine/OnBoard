@@ -9,3 +9,37 @@ body {
   font-family: Arial, helvetica, sans-serif;
   color: #fff;
 }
+
+div.nav {
+  overflow: hidden;
+  background-color: #000;
+}
+div.nav a {
+  padding: 13px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  float: left;
+}
+div.nav a:hover {
+  background-color: #fff;
+  color: #000;
+}
+div.nav a.current /*this is very special dw about it; it also doesnt need a :hover bc its SPECIAL*/ {
+  background-color: #4287f5;
+  color: #000;
+}
+
+/* div.content-row {
+  background-color: var(--background-color); maybe special bg color but for now no
+} */
+span.content-row {
+  float: left;
+  width: 33.3%
+}
+div.content-row::after { /*i know you dont like this but suck it up*/
+  clear: both;
+  content: "";
+  display: table;
+}
