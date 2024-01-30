@@ -4,10 +4,12 @@
 
 body {
   background-color: var(--background-color);
+  margin: 0; !IMPORTANT
 }
 * {
   font-family: Arial, helvetica, sans-serif;
   color: #fff;
+  magin-left: 5px;
 }
 
 div.nav {
@@ -42,4 +44,14 @@ div.content-row::after { /*i know you dont like this but suck it up*/
   clear: both;
   content: "";
   display: table;
+}
+
+div.header {
+  /*do i even need this?*/
+  text-align: -webkit-center;
+}
+div.header h1 {
+  color: #fff;
+  background-color: #000;
+  padding: 15px;
 }
