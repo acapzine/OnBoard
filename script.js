@@ -1,5 +1,5 @@
-// <a> is overrated lets use js
-function openWindow(url) {
-  var target = "_self";
-  window.open(url, target)
+// do we really need JS?
+/* window.onload = function() {
+  document.body.innerHTML = "<p>hi</p"
 }
+*/
