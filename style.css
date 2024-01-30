@@ -16,6 +16,7 @@ body {
 div.nav {
   overflow: hidden;
   background-color: #000;
+  margin: 0;
 }
 div.nav a {
   padding: 13px;
@@ -24,6 +25,7 @@ div.nav a {
   text-decoration: none;
   text-align: center;
   float: left;
+  margin: 0
 }
 div.nav a:hover {
   background-color: #fff;
@@ -32,6 +34,7 @@ div.nav a:hover {
 div.nav a.current /*this is very special dw about it; it also doesnt need a :hover bc its SPECIAL*/ {
   background-color: #4287f5;
   color: #000;
+  margin: 0;
 }
 
 /* fine */
