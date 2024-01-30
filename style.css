@@ -34,17 +34,22 @@ div.nav a.current /*this is very special dw about it; it also doesnt need a :hov
   color: #000;
 }
 
-/* div.content-row {
-  background-color: var(--background-color); maybe special bg color but for now no
-} */
-span.content-row {
-  float: left;
-  width: 33.3%
+/* fine */
+div.content-row {
+  display: flex;
+  flex-direction: row;
 }
-div.content-row::after { /*i know you dont like this but suck it up*/ /* nooooooooooo */
-  clear: both;
-  content: "";
-  display: table;
+span.content-row {
+  flex-grow: 3;
+}
+span.content-row .1 {
+  order: 1;
+}
+span.content-row .2 {
+  order: 2;
+}
+span.content-row .3 {
+  order: 3;
 }
 
 div.header {
