@@ -1,42 +1,11 @@
-html, body {
-  padding: 0;
-  margin: 0;
-  font-family: Oxygen, helvetica, sans-serif;
-  background-color: #fff;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: Montserrat, sans-serif;
-}
-.content {
-  float: left;
-}
-span.row {
-  float: left;
-  width: 33.3%;
-}
-.content:after {
-  content: "";
-  clear: both; /* interesting (clear and tables have not been used ever since the middle ages, you should try using flexbox https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) | y'know-i really dont ****ing care!*/
-  display: table;
+:ROOT {
+  --background-color: #2e2e2e;
 }
 
-.header {
-  text-align: -webkit-center;
-  background-color: #ffffff;
-  padding: 12px;
+body {
+  background-color: var(--background-color);
 }
-.nav {
-  overflow: hidden;
-  background-color: #000000;
-}
-.nav a {
-  padding: 12px;
-  float: left;
-  text-align: center;
-  background-color: #000000;
-  text-decoration: none;
-  color: #ffffff;
-}
-.nav a:hover {
-  background-color: red;
+* {
+  font-family: Arial, helvetica, sans-serif;
+  color: #fff;
 }
