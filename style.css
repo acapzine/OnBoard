@@ -2,23 +2,25 @@
   --background-color: #2e2e2e;
 }
 
-body {
+html, body {
   background-color: var(--background-color);
-  margin: 0 !important;
-  margin-left: 0 !important;
+  margin: 0;
+  padding: 0; /* you have to remove both padding and margin */
+  min-width: 100%;
+  min-height: 100%;
 }
 * {
-  font-family: Arial, helvetica, sans-serif;
+  font-family: Oxygen, sans-serif; /* Oxygen > every other font ever */
   color: #fff;
-  margin-left: 5px;
   box-sizing: border-box;
 }
-
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat, sans-serif;
+}
 div.nav {
   overflow: hidden;
   background-color: #000;
-  margin-left: 0 !important;
-  margin: 0 !important;
+  margin: 0;
 }
 div.nav a {
   padding: 13px;
@@ -27,8 +29,7 @@ div.nav a {
   text-decoration: none;
   text-align: center;
   float: left;
-  margin-left: 0 !important;
-  margin: 0 !important;
+  margin: 0;
 }
 div.nav a:hover {
   background-color: #fff;
@@ -37,8 +38,7 @@ div.nav a:hover {
 div.nav a.current /*this is very special dw about it; it also doesnt need a :hover bc its SPECIAL*/ {
   background-color: #4287f5;
   color: #000;
-  margin-left: 0 !important;
-  margin: 0 !important;
+  margin: 0;
 }
 
 /* fine */
