@@ -21,15 +21,18 @@ const titles = [
     "Mr.",
     "Mr.",
     "Mr.",
+    "Mr.",
     "Ms.",
+    "Mrs.",
     "Mrs.",
     "Mrs.",
     "Dr.",
     "Dr.",
     "Sir",
 ];
-for (let i = 0; i < 8; i++) {
-    const newNode = document.querySelector(".class-card-wrapper").cloneNode(true);
+const templateElem = document.querySelector(".class-card-wrapper");
+for (let i = 0; i < 9; i++) {
+    const newNode = templateElem.cloneNode(true);
     newNode.querySelector(".class-name").textContent = [
         "AP Language V",
         "Honors English",
@@ -61,3 +64,4 @@ for (let i = 0; i < 8; i++) {
                 ? "var(--cyellow)"
                 : "var(--cred)";
 }
+templateElem.remove();
