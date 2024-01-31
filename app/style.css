@@ -241,7 +241,19 @@ main {
   overflow: hidden;
   border: .4rem solid var(--c2);
   outline: var(--c6) 3px solid;
-  box-shadow: 4px 4px 1em 0px var(--c1);
+  box-shadow: -.3rem .3rem 1rem var(--c1);
+  transition: translate .3s ease-out, box-shadow .3s ease-out;
+}
+.class-card:hover {
+  translate: 0.3rem -0.3rem;
+  box-shadow: -0.6rem 0.6rem 1rem var(--c1);
+}
+.class-card { /* stole these from Stack overflow */
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+.class-card::-webkit-scrollbar { 
+    display: none; 
 }
 
 .class-name {
