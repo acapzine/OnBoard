@@ -283,7 +283,7 @@ main {
   justify-content: space-between;
 }
 
-.class-teacher {
+.class-card-teacher {
   margin: 0;
   padding: 0 1em;
   line-height: 1.5em;
@@ -291,7 +291,7 @@ main {
   bottom: 0;
 }
 
-.class-score {
+.class-card-score {
   margin: 0;
   position: relative;
   padding: 1em;
