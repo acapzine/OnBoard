@@ -4,6 +4,17 @@
 import faker from 'https://esm.run/@luckyluu/fakerjs';
 
 const randNum = upperBoundInclusive => Math.floor(Math.random() * (upperBoundInclusive + 1));
+const classes = shuffleArray([
+    "AP Language V",
+    "Honors English",
+    "Geoscience",
+    "Physical Education",
+    "Algebra I",
+    "Soccer",
+    "Music Theory",
+    "Contemporary Art",
+    "Family and Consumer Sciences"
+]);
 const assignments = [
     "Homework",
     "Essay",
@@ -33,17 +44,7 @@ const titles = [
 const templateElem = document.querySelector(".class-card-wrapper");
 for (let i = 0; i < 9; i++) {
     const newNode = templateElem.cloneNode(true);
-    newNode.querySelector(".class-name").textContent = [
-        "AP Language V",
-        "Honors English",
-        "Geoscience",
-        "Physical Education",
-        "Algebra I",
-        "Soccer",
-        "Music Theory",
-        "Contemporary Art",
-        "Family and Consumer Sciences"
-    ][i];
+    newNode.querySelector(".class-name").textContent = classes[i];
     newNode.querySelectorAll(".class-card-assignment-list-subsection-title").forEach((elem, elemNum) => {
         let dueDate = 3 + (2 * i % 3) + elemNum * (1 + randNum(2));
         elem.textContent = `Due in ${dueDate} day${dueDate == 1 ? "s" : ""}`;
@@ -77,4 +78,12 @@ templateElem.remove();
 });
 
 // yes
-document.getElementById("special-button").onclick = () => window.a.?();
+document.getElementById("special-button").onclick = () => window.a?.();
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
