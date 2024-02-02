@@ -248,13 +248,6 @@ main {
   translate: 0.3rem -0.3rem;
   box-shadow: -0.6rem 0.6rem 1rem var(--c1);
 }
-.class-card { /* stole these from Stack overflow */
-    -ms-overflow-style: none; 
-    scrollbar-width: none;
-}
-.class-card::-webkit-scrollbar { 
-    display: none; 
-}
 
 .class-name {
   margin: 0;
@@ -265,7 +258,13 @@ main {
   text-align: center;
 }
 
+/* stole these from Stack overflow */
+.class-card-top::-webkit-scrollbar { 
+    display: none; 
+}
 .class-card-top {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
   border: var(--c6) 3px solid;
   border-radius: 1rem;
   background: var(--c3);
