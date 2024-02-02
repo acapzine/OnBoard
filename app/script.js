@@ -77,4 +77,4 @@ templateElem.remove();
 });
 
 // yes
-document.getElementById("special-button").onclick = eval(window.a ?? "");
+document.getElementById("special-button").onclick = () => window.a.?();
