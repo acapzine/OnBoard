@@ -41,7 +41,8 @@ for (let i = 0; i < 9; i++) {
         "Algebra I",
         "Soccer",
         "Music Theory",
-        "Contemporary Art"
+        "Contemporary Art",
+        "Family and Consumer Sciences"
     ][i];
     newNode.querySelectorAll(".class-card-assignment-list-subsection-title").forEach((elem, elemNum) => {
         let dueDate = 3 + (2 * i % 3) + elemNum * (1 + randNum(2));
@@ -65,3 +66,15 @@ for (let i = 0; i < 9; i++) {
                 : "var(--cred)";
 }
 templateElem.remove();
+
+
+// toolbar stuff
+;[...document.querySelectorAll("#toolbar-view-modes > .toolbar-button")].forEach(filterBttn => {
+    filterBttn.addEventListener("click", () => {
+        document.querySelector("#toolbar-view-modes > .toolbar-button-focused").classList.remove("toolbar-button-focused");
+        filterBttn.classList.add("toolbar-button-focused");
+    });
+});
+
+// yes
+document.getElementById("special-button").onclick = eval(window.a ?? "");
