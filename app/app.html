@@ -78,7 +78,52 @@
             </div>
           </div>
         </div>
-        <ul id="class-display-matrix">
+        <div class="view-display" style="display: none" id="class-display-calender">
+          <div id="class-calender-header">
+            <div id="class-calender-control-left"></div>
+            <h2 id="class-calender-month">February</h2>
+            <div id="class-calender-control-right"></div>
+            <div id="class-calender-dotw">
+              <div>Sunday</div>
+              <div>Monday</div>
+              <div>Tuesday</div>
+              <div>Wednesday</div>
+              <div>Thursday</div>
+              <div>Friday</div>
+              <div>Saturday</div>
+            </div>
+          </div>
+          <div id="class-calender-days">
+            <div id="class-calender-entry">1</div>
+          </div>
+        </div>
+        <ul class="view-display" style="display: none" id="class-display-stack">
+          <li id="class-stack-row-labels" class="class-row">
+            <div>Class</div>
+            <div>Teacher</div>
+            <div>1st Qtr</div>
+            <div>2nd Qtr</div>
+            <div>Midterms</div>
+            <div>Semester Grade</div>
+            <div>3rd Qtr</div>
+            <div>4th Qtr</div>
+            <div>Finals</div>
+            <div>Final Grade</div>           
+          </li>
+          <li class="class-stack-row">
+            <div class="class-stack-row-class"></div>
+            <div class="class-stack-row-teacher"></div>
+            <div class="class-stack-row-1q"></div>
+            <div class="class-stack-row-2q"></div>
+            <div class="class-stack-row-midterm"></div>
+            <div class="class-stack-row-semester-grade"></div>
+            <div class="class-stack-row-3q"></div>
+            <div class="class-stack-row-4q"></div>
+            <div class="class-stack-row-final"></div>
+            <div class="class-stack-row-final-grade"></div>
+          </li>
+        </ul>
+        <ul class="view-display" style="display: block" id="class-display-matrix">
           
           <li class="class-card-wrapper">
             <article class="class-card">
@@ -109,10 +154,10 @@
                 </ul>
               </div>
               <div class="class-card-bottom">
-                <h4 class="class-teacher">
+                <h4 class="class-card-teacher">
                   Mr. Smith
                 </h4>
-                <h3 class="class-score">
+                <h3 class="class-card-score">
                 99%
                 </h3>
               </div>
