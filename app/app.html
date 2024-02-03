@@ -77,12 +77,12 @@
             </div>
           </div>
         </div>
-        <div class="view-display" style="display: none" id="class-display-calender">
-          <div id="class-calender-header">
-            <div id="class-calender-control-left"></div>
-            <h2 id="class-calender-month">February</h2>
-            <div id="class-calender-control-right"></div>
-            <div id="class-calender-dotw">
+        <div class="view-display" style="display: none" id="class-display-calendar">
+          <div id="class-calendar-header">
+            <div id="class-calendar-control-left"></div>
+            <h2 id="class-calendar-month">February</h2>
+            <div id="class-calendar-control-right"></div>
+            <div id="class-calendar-dotw">
               <div>Sunday</div>
               <div>Monday</div>
               <div>Tuesday</div>
@@ -92,8 +92,13 @@
               <div>Saturday</div>
             </div>
           </div>
-          <div id="class-calender-days">
-            <div id="class-calender-entry">1</div>
+          <div id="class-calendar-days">
+            <div class="class-calendar-entry" id="class-calendar-entry-template">
+              <div class="class-calendar-entry-day">1</div>
+              <ul class="class-calendar-entry-contents">
+                <li class="class-calendar-entry-content">Work</li>
+              </ul>
+            </div>
           </div>
         </div>
         <ul class="view-display" style="display: none" id="class-display-stack">
@@ -109,7 +114,7 @@
             <div>Finals</div>
             <div>Final Grade</div>           
           </li>
-          <li class="class-stack-row">
+          <li class="class-stack-row" id="class-stack-row-template">
             <div class="class-stack-row-class"></div>
             <div class="class-stack-row-teacher"></div>
             <div class="class-stack-row-1q"></div>
@@ -122,7 +127,7 @@
             <div class="class-stack-row-final-grade"></div>
           </li>
         </ul>
-        <ul class="view-display" style="display: block" id="class-display-matrix">
+        <ul class="view-display" style="display: flex" id="class-display-matrix">
           
           <li class="class-card-wrapper">
             <article class="class-card">
