@@ -30,7 +30,7 @@
       <a class="sidebar-link" href="#">Home</a>
       <a class="sidebar-link" href="#">Assignments</a>
       <a class="sidebar-link" href="#">Grades</a>
-      <a class="sidebar-link class-sidebar-dropdown" href="#">Classes</a>
+      <a class="sidebar-link" href="#">Classes</a>
       <a class="sidebar-link" href="#">Notifications</a>
       <a class="sidebar-link" href="#">Messages</a>
       <a class="sidebar-link" href="#">Information</a>
@@ -48,13 +48,13 @@
               this will not use <input> elems since its hard to style them (theyre self closing tags)
             -->
             <div class="toolbar-section" id="toolbar-view-modes">
-              <button class="toolbar-button toolbar-button-focused" id="view-mode-matrix">
+              <button class="toolbar-button toolbar-button-focused" id="view-mode-matrix" data-target="matrix">
                 <img class="toolbar-icon" src="https://i.ibb.co/RSTcfPL/grid.png" />
               </button>
-              <button class="toolbar-button" id="view-mode-stack">
+              <button class="toolbar-button" id="view-mode-stack" data-target="stack">
                 <img class="toolbar-icon" src="https://i.ibb.co/ZNgY93L/table-list.png" />
               </button>
-              <button class="toolbar-button" id="view-mode-calendar">
+              <button class="toolbar-button" id="view-mode-calendar" data-target="calendar">
                 <img class="toolbar-icon" src="https://i.ibb.co/Yfq01Hr/calendar-day.png" />
               </button>
             </div>
@@ -102,17 +102,17 @@
           </div>
         </div>
         <ul class="view-display" style="display: none" id="class-display-stack">
-          <li id="class-stack-row-labels" class="class-row">
+          <li id="class-stack-row-labels">
             <div>Class</div>
             <div>Teacher</div>
-            <div>1st Qtr</div>
-            <div>2nd Qtr</div>
+            <div>1st Qtr.</div>
+            <div>2nd Qtr.</div>
             <div>Midterms</div>
-            <div>Semester Grade</div>
-            <div>3rd Qtr</div>
-            <div>4th Qtr</div>
+            <div>Smstr. Grade</div>
+            <div>3rd Qtr.</div>
+            <div>4th Qtr.</div>
             <div>Finals</div>
-            <div>Final Grade</div>           
+            <div>Class Grade</div>           
           </li>
           <li class="class-stack-row" id="class-stack-row-template">
             <div class="class-stack-row-class"></div>
