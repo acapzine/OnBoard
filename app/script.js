@@ -53,12 +53,12 @@ for (let i = 0; i < 9; i++) {
         elem.textContent = assignments[randNum(assignments.length - 1)];
     });
     document.querySelector("#class-display-matrix").appendChild(newNode);
-    newNode.querySelector(".class-teacher").textContent = titles[randNum(titles.length - 1)] + " " + faker.name.lastName();
+    newNode.querySelector(".class-card-teacher").textContent = titles[randNum(titles.length - 1)] + " " + faker.name.lastName();
 
     const score = (randNum(50) + 50);
-    newNode.querySelector(".class-score").textContent = score + "%";
+    newNode.querySelector(".class-card-score").textContent = score + "%";
     // ternary hell my beloved
-    newNode.querySelector(".class-score").style.color = score >= 90 
+    newNode.querySelector(".class-card-score").style.color = score >= 90 
         ? "var(--cblue)"
         : score >= 80
             ? "var(--cgreen)"
