@@ -249,7 +249,7 @@ main {
   box-shadow: -0.6rem 0.6rem 1rem var(--c1);
 }
 
-.class-name {
+.class-card-name {
   margin: 0;
   padding: 1rem;
   white-space: nowrap;
