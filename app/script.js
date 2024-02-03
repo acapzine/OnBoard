@@ -100,8 +100,10 @@ const daysInMonth = 29; // 1/48 chance basically
 let day = 1;
 for (let i = 0; i < 7 * 5; i++) {
     const calendarEntryInstance = calendarEntryTemplate.cloneNode(true);
+    document.querySelector("#class-calendar-days").appendChild(calendarEntryInstance);
     if (i < auxillaryDays || i > auxillaryDays + daysInMonth - 1) {
         calendarEntryInstance.classList.add("class-calendar-entry-nulled");
+        calendarEntryInstance.textContent = ""; // clears all children
         continue;
     }
     calendarEntryInstance.querySelector(".class-calendar-entry-day").textContent = day;
