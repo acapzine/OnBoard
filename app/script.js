@@ -41,10 +41,12 @@ const titles = [
     "Dr.",
     "Sir",
 ];
+const teachers = Array(9).fill(null).map(() => titles[randNum(titles.length - 1)] + " " + faker.name.lastName());
+
 const templateElem = document.querySelector(".class-card-wrapper");
 for (let i = 0; i < 9; i++) {
     const newNode = templateElem.cloneNode(true);
-    newNode.querySelector(".class-name").textContent = classes[i];
+    newNode.querySelector(".class-card-name").textContent = classes[i];
     newNode.querySelectorAll(".class-card-assignment-list-subsection-title").forEach((elem, elemNum) => {
         let dueDate = 3 + (2 * i % 3) + elemNum * (1 + randNum(2));
         elem.textContent = `Due in ${dueDate} day${dueDate == 1 ? "s" : ""}`;
@@ -52,8 +54,7 @@ for (let i = 0; i < 9; i++) {
     newNode.querySelectorAll(".class-card-assignment-list-subsection-elem > a").forEach(elem => {
         elem.textContent = assignments[randNum(assignments.length - 1)];
     });
-    document.querySelector("#class-display-matrix").appendChild(newNode);
-    newNode.querySelector(".class-card-teacher").textContent = titles[randNum(titles.length - 1)] + " " + faker.name.lastName();
+    newNode.querySelector(".class-card-teacher").textContent = teachers[i];
 
     const score = (randNum(50) + 50);
     newNode.querySelector(".class-card-score").textContent = score + "%";
@@ -65,20 +66,61 @@ for (let i = 0; i < 9; i++) {
             : score >= 70
                 ? "var(--cyellow)"
                 : "var(--cred)";
+
+    document.querySelector("#class-display-matrix").appendChild(newNode);
 }
 templateElem.remove();
 
+// stack view
+const stackRowTemplate = document.querySelector("#class-stack-row-template");
+for (let i = 0; i < 9; i++) {
+    const stackRowInstance = stackRowTemplate.cloneNode(true);
+    for (const [entryType, entryVal] of [
+        ["class", classes[i]],
+        ["teacher", teachers[i]],
+        ["1q", randNum(50) + 50],
+        ["2q", randNum(50) + 50],
+        ["midterm", randNum(50) + 50],
+        ["semester-grade", randNum(50) + 50],
+        ["3q", randNum(50) + 50],
+        ["4q", ""],
+        ["finals", ""],
+        ["class-grade", randNum(50) + 50]
+    ]) {
+        stackRowInstance.querySelector(".class-stack-row-" + a).textContent = b;
+    }
+    document.querySelector("#class-display-stack").appendChild(newNode);
+}
+stackRowTemplate.remove();
+
+// calendar view
+const calendarEntryTemplate = document.querySelector("#class-calendar-entry-template");
+const auxillaryDays = 4;
+const daysInMonth = 29; // 1/48 chance basically
+let day = 1;
+for (let i = 0; i < 7 * 5; i++) {
+    const calendarEntryInstance = calendarEntryTemplate.cloneNode(true);
+    if (i < auxillaryDays || i > auxillaryDays + daysInMonth - 1) {
+        calendarEntryInstance.classList.add("class-calendar-entry-nulled");
+        continue;
+    }
+    calendarEntryInstance.querySelector(".class-calendar-entry-day").textContent = day;
+    document.querySelector("#class-calendar-days").appendChild(newNode);
+    day++;
+}
+calendarEntryTemplate.remove();
 
 // toolbar stuff
-;[...document.querySelectorAll("#toolbar-view-modes > .toolbar-button")].forEach(filterBttn => {
+;[...document.querySelectorAll(".toolbar-button")].forEach(filterBttn => {
     filterBttn.addEventListener("click", () => {
-        document.querySelector("#toolbar-view-modes > .toolbar-button-focused").classList.remove("toolbar-button-focused");
+        document.querySelector(".toolbar-button-focused").classList.remove("toolbar-button-focused");
         filterBttn.classList.add("toolbar-button-focused");
+        [...document.querySelectorAll(".view-display")].forEach(classDisplay => {
+            classDisplay.style.display = "none";
+        })
+        document.querySelector("#class-display-" + filterBttn.dataset.target).style.display = "flex";
     });
 });
-
-// yes
-document.getElementById("special-button").onclick = () => window.a?.();
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
