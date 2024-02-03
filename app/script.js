@@ -87,7 +87,7 @@ for (let i = 0; i < 9; i++) {
         ["finals", ""],
         ["class-grade", randNum(50) + 50]
     ]) {
-        stackRowInstance.querySelector(".class-stack-row-" + a).textContent = b;
+        stackRowInstance.querySelector(".class-stack-row-" + entryType).textContent = entryVal;
     }
     document.querySelector("#class-display-stack").appendChild(newNode);
 }
