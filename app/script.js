@@ -89,7 +89,7 @@ for (let i = 0; i < 9; i++) {
     ]) {
         stackRowInstance.querySelector(".class-stack-row-" + entryType).textContent = entryVal;
     }
-    document.querySelector("#class-display-stack").appendChild(newNode);
+    document.querySelector("#class-display-stack").appendChild(stackRowInstance);
 }
 stackRowTemplate.remove();
 
@@ -105,7 +105,7 @@ for (let i = 0; i < 7 * 5; i++) {
         continue;
     }
     calendarEntryInstance.querySelector(".class-calendar-entry-day").textContent = day;
-    document.querySelector("#class-calendar-days").appendChild(newNode);
+    document.querySelector("#class-calendar-days").appendChild(calendarEntryInstance);
     day++;
 }
 calendarEntryTemplate.remove();
