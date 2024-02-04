@@ -232,6 +232,7 @@ main {
   justify-content: center;
   overflow: scroll;
   flex-direction: column;
+  padding: 2rem 0;
 }
 #class-calendar-header {
   width: 80%;
@@ -239,11 +240,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 1rem;
 }
 #class-calendar-header-controls {
   display: flex;
   align-items: center;
-  height: 5.5rem;
+  height: 6rem;
   justify-content: center;
 }
 #class-calendar-control-left {
@@ -259,6 +261,9 @@ main {
   border-top: .5rem solid transparent;
   border-bottom: .5rem solid transparent; 
   border-left: .9rem solid var(--c1); 
+}
+#class-calendar-month {
+  padding: 0 1rem;
 }
 #class-calendar-dotw {
   width: 100%;
@@ -279,17 +284,22 @@ main {
   width: calc(100% / 7);
   height: 20%;
   display: flex;
-}
-.class-calendar-entry-nulled {
-  background: var(--c2);
+  background: var(--c3);
+  outline: 0.2rem solid var(--c1);
 }
 
 .class-calendar-entry-contents {
   width: -webkit-fill-available;
+  list-style-type: "- ";
+  margin: 0;
+  padding: 1.5rem 0 0 1rem;
 }
 .class-calendar-entry-day {
   text-align: center;
-  padding: 0.2rem 0.5rem;
+  width: 2rem;
+  position: relative;
+  top: 0.5rem;
+  
 }
 
 
