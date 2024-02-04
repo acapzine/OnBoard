@@ -197,6 +197,7 @@ main {
 
 .view-display {
   background: var(--c5);
+  margin: 0;
 }
 #class-display-stack {
   width: 100%;
@@ -212,12 +213,15 @@ main {
   align-items: center;
   width: calc(100% - 2rem);
   text-align: center;
-  gap: .3rem;
 }
 :is(#class-stack-row-labels, .class-stack-row) > * {
-  flex: auto;
   text-overflow: ellipsis;
   height: 2rem;
+  width: 7.5%;
+  padding: .25%;
+}
+:is(#class-stack-row-labels, .class-stack-row):first-child {
+  width: 19.5%;
 }
 .class-stack-row {
 
