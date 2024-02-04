@@ -144,14 +144,14 @@ function shuffleArray(array) {
 		const fonts = JSON.parse(fontData).items
 			.filter(font => {
 			    switch (font.category) {
-			        case "sans-serif":
-					case "serif":
-				    case "monospace":
+			    case "sans-serif":
+				case "serif":
+				case "monospace":
 			        return true;
 			    }
-				return false;
+			    return false;
 			})
-			.map(font => [font.family, font.files.regular])
+			.map(font => [font.family, httpToHttps(font.files.regular)])
 			.slice(0, 50);
 		const wallpaperUrls = [];
 		for (let i = 1; i <= 5; i++) {
@@ -164,6 +164,7 @@ function shuffleArray(array) {
 		
 		await Promise.all(
 			fonts.map(([fontFamily, fontUrl]) => {
+				
 				const ff = new FontFace(
 					fontFamily,
 					`url(${fontUrl})`
@@ -194,3 +195,8 @@ function shuffleArray(array) {
 		console.log(e);
 	}
 })()
+function httpToHttps(url) {
+	const u = new URL(url);
+	u.protocol = "https:";
+	return u.toString();
+}
