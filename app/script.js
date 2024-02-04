@@ -137,11 +137,11 @@ function shuffleArray(array) {
 		const fontRes = await fetch("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCHFuZt0jhA4hKdzTdILMzt9J5h2mR1ltE", {
 			mode: "no-cors",
 			headers: {
-				"Content-Type": "application/json",
+				"Accept": "application/json",
 			}
 		});
 		const fontData = await fontRes.text();
-		console.log(fontData);
+		// console.log(fontData);
 		const fonts = JSON.parse(fontData).items
 			.filter(font => {
 			    switch (font.category) {
