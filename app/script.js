@@ -159,7 +159,7 @@ await Promise.all(
 		);
 		document.fonts.add(ff);
 		return ff.load();
-	});
+    })
 );
 
 const wallpapers = wallpaperUrls.map(wallpaperUrl => {
