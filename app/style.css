@@ -1,9 +1,10 @@
 :root {
   --c1: rgb(60 60 60 / .6);
-  --c2: rgb(150 150 150 / .6);
+  --c2: rgb(200 200 200 / .6);
   --c3: rgb(80 80 80 / .3);
   --c4: rgb(230 230 230 / .4);
   --c5: rgb(210 210 210 / .7);
+  --c6: rgb(0 0 0 / .3);
   /* body text */
   --ctext: rgb(46, 46, 46);
   /* header text */
@@ -64,6 +65,11 @@ header {
   justify-content: space-between;
   padding: 0 3rem;
   backdrop-filter: blur(6px);
+}
+
+::placeholder {
+    opacity: 1;
+    color: var(--ctext);
 }
 
 #logo {
@@ -228,7 +234,9 @@ main {
   width: 10rem;
   padding: .3rem;
 }
-
+#class-stack-row-labels {
+  padding-bottom: 0.5rem;
+}
 
 /* CALENDAR CALENDAR CALENDAR CALENDAR CALENDAR CALENDAR CALENDAR CALENDAR CALENDAR CALENDAR */
 
@@ -360,7 +368,8 @@ main {
   justify-content: space-between;
   border-radius: 1rem;
   overflow: hidden;
-  border: .4rem solid var(--c2);
+  border: .6rem solid var(--c6);
+  border-bottom: none;
   box-shadow: -.3rem .3rem 1rem var(--c1);
   transition: translate .3s ease-out, box-shadow .3s ease-out;
 }
@@ -399,6 +408,7 @@ main {
   position: relative;
   align-items: center;
   justify-content: space-between;
+  background: var(--c6);
 }
 
 .class-card-teacher {
