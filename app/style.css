@@ -195,6 +195,33 @@ main {
   overflow: scroll;
 }
 
+.view-display {
+  background: var(--c5);
+}
+#class-display-stack {
+  width: 100%;
+  overflow-x: scroll;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+#class-stack-row-labels, .class-stack-row {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: calc(100% - 2rem);
+  text-align: center;
+  gap: .3rem;
+}
+:is(#class-stack-row-labels, .class-stack-row) > * {
+  flex: auto;
+  text-overflow: ellipsis;
+  height: 2rem;
+}
+.class-stack-row {
+
+}
 #class-display-matrix {
   margin: 0;
   padding: 3rem;
@@ -203,7 +230,6 @@ main {
   flex-direction: row;
   width: 100%;
   min-height: calc(100% - 9rem);
-  background: var(--c5);
   overflow-y: scroll;
   flex-wrap: wrap;
   gap: 3rem;
