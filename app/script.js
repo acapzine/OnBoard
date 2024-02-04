@@ -178,16 +178,16 @@ function shuffleArray(array) {
 		    wallpaperUrls.map(async wallpaperUrl => {
 			const res = await fetch(wallpaperUrl);
 		        const blob = await res.blob();
-		        return await new Promise(res => {
+		        return await new Promise(resolve => {
 		            const r = new FileReader();
-		            r.onload = () => res(r.result);
+		            r.onload = () => resolve(r.result);
 		            r.readAsDataURL(blob);
 		        });
 		    })
 		);
-		
+		console.log(wallpapers)
 		document.querySelector("#special-button").onclick = () => {
-		    document.body.style.backgroundImage = "url(" + wallpapers[randNum(wallpapers.length - 1)] + ")";
+		    document.body.style.backgroundImage = "url(\"" + wallpapers[randNum(wallpapers.length - 1)] + "\")";
 		    document.documentElement.style.setProperty("--font-body", fonts[randNum(fonts.length - 1)][0]);
 		    document.documentElement.style.setProperty("--font-header", fonts[randNum(fonts.length - 1)][0]);
 		}
