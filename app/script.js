@@ -152,7 +152,7 @@ for (let i = 1; i <= 5; i++) {
 }
 
 await Promise.all(
-	fonts.map([fontFamily, fontUrl] => {
+	fonts.map(([fontFamily, fontUrl]) => {
 		const ff = new FontFace(
 			fontFamily,
 			`url(${fontUrl})`
