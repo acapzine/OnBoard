@@ -211,18 +211,16 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: calc(100% - 2rem);
+  width: 100rem;
   text-align: center;
 }
 :is(#class-stack-row-labels, .class-stack-row) > * {
   text-overflow: ellipsis;
   height: 2rem;
-  width: 7.5%;
-  padding: .25%;
+  width: 10rem;
+  padding: .3rem;
 }
-:is(#class-stack-row-labels, .class-stack-row):first-child {
-  width: 19.5%;
-}
+
 .class-stack-row {
 
 }
