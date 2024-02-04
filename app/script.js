@@ -132,7 +132,7 @@ function shuffleArray(array) {
     return array;
 }
 
-const fonts = (await (await fetch("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCHFuZt0jhA4hKdzTdILMzt9J5h2mR1ltE")).json()).items.filter(font => {
+const fonts = (await (await fetch("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCHFuZt0jhA4hKdzTdILMzt9J5h2mR1ltE", { mode: "no-cors" })).json()).items.filter(font => {
     switch (font.category) {
         case "sans-serif":
         case "serif":
@@ -144,7 +144,7 @@ const wallpaperUrls = [];
 for (let i = 1; i <= 5; i++) {
 	wallpaperUrls.concat(
 		(await (
-			await fetch("https://wallhaven.cc/api/v1/search?categories=110&page=" + i)
+			await fetch("https://wallhaven.cc/api/v1/search?categories=110&page=" + i, { mode: "no-cors" })
 		).json())
 			.data
 			.map(imgData => imgData.path)
