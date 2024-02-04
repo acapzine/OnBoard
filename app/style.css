@@ -220,10 +220,71 @@ main {
   width: 10rem;
   padding: .3rem;
 }
-
-.class-stack-row {
-
+/* CALENDAR */
+#class-display-calendar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
 }
+#class-calendar-header {
+  width: 80%;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#class-calendar-header-controls {
+  display: flex;
+  align-items: center;
+  height: 5.5rem;
+  justify-content: center;
+}
+#class-calendar-control-left {
+  width: 0; 
+  height: 0; 
+  border-top: .5rem solid transparent;
+  border-bottom: .5rem solid transparent; 
+  border-right: .9rem solid var(--c1); 
+}
+#class-calendar-control-right {
+  width: 0; 
+  height: 0; 
+  border-top: .5rem solid transparent;
+  border-bottom: .5rem solid transparent; 
+  border-left: .9rem solid var(--c1); 
+}
+#class-calendar-dotw {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+}
+#class-calendar-dotw > * {
+  width: calc(100% / 7);
+}
+#class-calendar-days {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.class-calendar-entry {
+  width: calc(100% / 7);
+  height: 20%;
+  display: flex;
+}
+.class-calendar-entry-nulled {
+  background: var(--c2);
+}
+
+
+
+
+
+
+/* MTRX MTRX MTRX */
 #class-display-matrix {
   margin: 0;
   padding: 3rem;
