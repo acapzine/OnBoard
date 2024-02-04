@@ -174,7 +174,6 @@ function shuffleArray(array) {
 		    })
 		);
 		
-		console.log(wallpapers)
 		document.querySelector("#special-button").onclick = () => {
 		    document.body.style.backgroundImage = "url(" + wallpaperUrls[randNum(wallpaperUrls.length - 1)] + ")";
 		    document.documentElement.style.setProperty("--font-body", fonts[randNum(fonts.length - 1)][0]);
