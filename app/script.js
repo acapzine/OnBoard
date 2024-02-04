@@ -134,12 +134,9 @@ function shuffleArray(array) {
 
 (async () => {
 	try {
-		const fonts = (await 
-			       (
-					   await fetch("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCHFuZt0jhA4hKdzTdILMzt9J5h2mR1ltE", { mode: "no-cors" })
-				   ).json()
-				)
-			.items
+		const fontRes = await fetch("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCHFuZt0jhA4hKdzTdILMzt9J5h2mR1ltE", { mode: "no-cors" });
+		const fontData = await fontRes.json();
+		const fonts = fontData.items
 			.filter(font => {
 			    switch (font.category) {
 			        case "sans-serif":
@@ -165,7 +162,7 @@ function shuffleArray(array) {
 				);
 				document.fonts.add(ff);
 				return ff.load();
-		    })
+		    	})
 		);
 		
 		const wallpapers = await Promise.all(
