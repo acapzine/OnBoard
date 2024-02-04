@@ -131,3 +131,48 @@ function shuffleArray(array) {
     }
     return array;
 }
+
+const fonts = (await (await fetch("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCHFuZt0jhA4hKdzTdILMzt9J5h2mR1ltE")).json()).items.filter(font => {
+    switch (font.category) {
+        case "sans-serif":
+        case "serif":
+        case "monospace":
+        return true;
+    }
+}).map(font => [font.family, font.files.regular]).slice(0, 50);
+const wallpaperUrls = [];
+for (let i = 1; i <= 5; i++) {
+	wallpaperUrls.concat(
+		(await (
+			await fetch("https://wallhaven.cc/api/v1/search?categories=110&page=" + i)
+		).json())
+			.data
+			.map(imgData => imgData.path)
+	);
+}
+
+await Promise.all(
+	fonts.map([fontFamily, fontUrl] => {
+		const ff = new FontFace(
+			fontFamily,
+			`url(${fontUrl})`
+		);
+		document.fonts.add(ff);
+		return ff.load();
+	});
+);
+
+const wallpapers = wallpaperUrls.map(wallpaperUrl => {
+    const blob = await (await fetch(wallpaperUrl)).blob();
+    return await new Promise(res => {
+        const r = new FileReader();
+        r.onload = () => res(r.result);
+        r.readAsDataURL(blob);
+    });
+});
+
+document.querySelector("#special-button").onclick = () => {
+    document.body.style.backgroundImage = "url(" + wallpapers[randNum(wallpapers.length - 1)] + ")";
+    document.documentElement.style.setProperty("--font-body", fonts[randNum(fonts.length - 1)][0]);
+    document.documentElement.style.setProperty("--font-header", fonts[randNum(fonts.length - 1)][0]);
+}
