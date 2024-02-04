@@ -113,7 +113,7 @@ for (let i = 0; i < 7 * 5; i++) {
 calendarEntryTemplate.remove();
 
 // toolbar stuff
-;[...document.querySelectorAll(".toolbar-button")].forEach(filterBttn => {
+;[...document.querySelectorAll("#toolbar-view-modes .toolbar-button")].forEach(filterBttn => {
     filterBttn.addEventListener("click", () => {
         document.querySelector(".toolbar-button-focused").classList.remove("toolbar-button-focused");
         filterBttn.classList.add("toolbar-button-focused");
