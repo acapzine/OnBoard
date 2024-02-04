@@ -155,7 +155,7 @@ function shuffleArray(array) {
 			.slice(0, 50);
 		const wallpaperUrls = [];
 		for (let i = 1; i <= 5; i++) {
-			const res = await fetch("https://wallhaven.cc/api/v1/search?categories=110&page=" + i,
+			const res = await fetch("https://corsproxy.io/?https://wallhaven.cc/api/v1/search?categories=110&page=" + i,
 						{ "Accept": "application/json" }
 					       );
 			const obj = await res.json();
