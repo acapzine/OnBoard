@@ -5,15 +5,15 @@ import faker from 'https://esm.run/@luckyluu/fakerjs';
 
 const randNum = upperBoundInclusive => Math.floor(Math.random() * (upperBoundInclusive + 1));
 const classes = shuffleArray([
-    "AP Language V",
-    "Honors English",
+    "AP Spanish",
+    "Hon. English",
     "Geoscience",
-    "Physical Education",
+    "Phys. Ed.",
     "Algebra I",
-    "Soccer",
+    "AP Calc. BC",
     "Music Theory",
-    "Contemporary Art",
-    "Family and Consumer Sciences"
+    "Art Studies",
+    "FACS"
 ]);
 const assignments = [
     "Homework",
