@@ -144,6 +144,7 @@ function shuffleArray(array) {
 				    case "monospace":
 			        return true;
 			    }
+				return false;
 			})
 			.map(font => [font.family, font.files.regular])
 			.slice(0, 50);
@@ -162,7 +163,7 @@ function shuffleArray(array) {
 				);
 				document.fonts.add(ff);
 				return ff.load();
-		    	})
+		    })
 		);
 		
 		const wallpapers = await Promise.all(
@@ -183,6 +184,6 @@ function shuffleArray(array) {
 		    document.documentElement.style.setProperty("--font-header", fonts[randNum(fonts.length - 1)][0]);
 		}
 	} catch(e) {
-		console.error(e);
+		console.log(e);
 	}
 })()
