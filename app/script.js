@@ -155,11 +155,11 @@ function shuffleArray(array) {
 			.slice(0, 50);
 		const wallpaperUrls = [];
 		for (let i = 1; i <= 5; i++) {
-			const res = await fetch("https://thingproxy.freeboard.io/fetch/https://wallhaven.cc/api/v1/search?categories=110&page=" + i,
+			const res = await fetch("https://corsproxy.io/?https://wallhaven.cc/api/v1/search?categories=110&page=" + i,
 						{ "Accept": "application/json" }
 					       );
 			const obj = await res.json();
-			wallpaperUrls.push(...obj.data.map(imgData => "https://thingproxy.freeboard.io/fetch/" + imgData.path));
+			wallpaperUrls.push(...obj.data.map(imgData => imgData.path));
 		}
 		
 		await Promise.all(
@@ -174,20 +174,9 @@ function shuffleArray(array) {
 		    })
 		);
 		
-		const wallpapers = await Promise.all(
-		    wallpaperUrls.map(async wallpaperUrl => {
-			const res = await fetch(wallpaperUrl);
-		        const blob = await res.blob();
-		        return await new Promise(resolve => {
-		            const r = new FileReader();
-		            r.onload = () => resolve(r.result);
-		            r.readAsDataURL(blob);
-		        });
-		    })
-		);
 		console.log(wallpapers)
 		document.querySelector("#special-button").onclick = () => {
-		    document.body.style.backgroundImage = "url(" + wallpapers[randNum(wallpapers.length - 1)] + ")";
+		    document.body.style.backgroundImage = "url(" + wallpaperUrls[randNum(wallpaperUrls.length - 1)] + ")";
 		    document.documentElement.style.setProperty("--font-body", fonts[randNum(fonts.length - 1)][0]);
 		    document.documentElement.style.setProperty("--font-header", fonts[randNum(fonts.length - 1)][0]);
 		}
