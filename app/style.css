@@ -18,13 +18,16 @@
   --cred: rgb(153, 0, 0);
   /* <70% */
   --ctoolbar: rgb(0 0 0 / .15);
+  
+  --font-body: "Oxygen";
+  --font-header: "Montserrat";
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Oxygen";
+  font-family: var(--font-body);
   color: var(--ctext);
   overflow: hidden;
   width: 100vw;
@@ -46,7 +49,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Montserrat, sans-serif;
+  font-family: var(--font-header);
   font-weight: normal;
   color: var(--cheader);
 }
