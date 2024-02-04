@@ -373,12 +373,12 @@ main {
   overflow: hidden;
   border: .6rem solid var(--c6);
   border-bottom: none;
-  box-shadow: -.3rem .3rem 1rem var(--c1);
+  box-shadow: -.3rem .3rem 1rem var(--c6);
   transition: translate .3s ease-out, box-shadow .3s ease-out;
 }
 .class-card:hover {
   translate: 0.3rem -0.3rem;
-  box-shadow: -0.6rem 0.6rem 1rem var(--c1);
+  box-shadow: -0.6rem 0.6rem 1rem var(--c6);
 }
 
 .class-card-name {
