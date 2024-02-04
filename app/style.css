@@ -37,6 +37,10 @@ body {
   background-position: center;
 }
 
+header img {
+    opacity: .7;
+}
+
 h1,
 h2,
 h3,
@@ -285,6 +289,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid var(--c1);
+  box-sizing: content-box;
 }
 .class-calendar-entry {
   width: calc(calc(100% / 7) - 2px);
