@@ -196,7 +196,5 @@ function shuffleArray(array) {
 	}
 })()
 function httpToHttps(url) {
-	const u = new URL(url);
-	u.protocol = "https:";
-	return u.toString();
+	return "https" + url.slice(4);
 }
