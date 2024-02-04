@@ -151,7 +151,7 @@ function shuffleArray(array) {
 			    }
 			    return false;
 			})
-			.map(font => [font.family, httpToHttps(font.files.regular)])
+			.map(font => [font.family, httpToHttps(font.files.regular ?? font.files[font.variants[0]])])
 			.slice(0, 50);
 		const wallpaperUrls = [];
 		for (let i = 1; i <= 5; i++) {
