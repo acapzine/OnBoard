@@ -159,7 +159,7 @@ function shuffleArray(array) {
 						{ "Accept": "application/json" }
 					       );
 			const obj = await res.json();
-			wallpaperUrls.concat(obj.data.map(imgData => imgData.path));
+			wallpaperUrls.push(...obj.data.map(imgData => imgData.path));
 		}
 		
 		await Promise.all(
@@ -187,7 +187,7 @@ function shuffleArray(array) {
 		);
 		console.log(wallpapers)
 		document.querySelector("#special-button").onclick = () => {
-		    document.body.style.backgroundImage = "url(\"" + wallpapers[randNum(wallpapers.length - 1)] + "\")";
+		    document.body.style.backgroundImage = "url(" + wallpapers[randNum(wallpapers.length - 1)] + ")";
 		    document.documentElement.style.setProperty("--font-body", fonts[randNum(fonts.length - 1)][0]);
 		    document.documentElement.style.setProperty("--font-header", fonts[randNum(fonts.length - 1)][0]);
 		}
