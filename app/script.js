@@ -162,14 +162,16 @@ await Promise.all(
     })
 );
 
-const wallpapers = wallpaperUrls.map(wallpaperUrl => {
-    const blob = await (await fetch(wallpaperUrl)).blob();
-    return await new Promise(res => {
-        const r = new FileReader();
-        r.onload = () => res(r.result);
-        r.readAsDataURL(blob);
-    });
-});
+const wallpapers = await Promise.all(
+    wallpaperUrls.map(async wallpaperUrl => {
+        const blob = await (await fetch(wallpaperUrl)).blob();
+        return await new Promise(res => {
+            const r = new FileReader();
+            r.onload = () => res(r.result);
+            r.readAsDataURL(blob);
+        });
+    })
+);
 
 document.querySelector("#special-button").onclick = () => {
     document.body.style.backgroundImage = "url(" + wallpapers[randNum(wallpapers.length - 1)] + ")";
