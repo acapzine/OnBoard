@@ -1,10 +1,9 @@
 :root {
-  --c1: #626262;
-  --c2: #a1a1a1;
-  --c3: #b6b6b6;
-  --c4: #e6e6e6;
-  --c5: #c2c2c2;
-  --c6: #757575;
+  --c1: rgb(60 60 60 / .6);
+  --c2: rgb(150 150 150 / .6);
+  --c3: rgb(80 80 80 / .3);
+  --c4: rgb(230 230 230 / .4);
+  --c5: rgb(210 210 210 / .7);
   /* body text */
   --ctext: rgb(46, 46, 46);
   /* header text */
@@ -33,6 +32,9 @@ body {
   grid-template:
     "a a" 4rem
     "b c" calc(100% - 4rem) / 10rem 1fr;
+  background-image: url("https://t3.ftcdn.net/jpg/05/85/86/44/360_F_585864419_kgIYUcDQ0yiLOCo1aRjeu7kRxndcoitz.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 h1,
@@ -57,6 +59,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 3rem;
+  backdrop-filter: blur(6px);
 }
 
 #logo {
@@ -78,6 +81,7 @@ header {
   padding: 2rem 1rem;
   gap: .75rem;
   overflow: scroll;
+  backdrop-filter: blur(11px);
 }
 
 .sidebar-link {
@@ -181,9 +185,6 @@ main {
   overflow: scroll;
   width: 100%;
   height: 100%;
-  background-image: url("https://t3.ftcdn.net/jpg/05/85/86/44/360_F_585864419_kgIYUcDQ0yiLOCo1aRjeu7kRxndcoitz.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 #workspace-prelude {
@@ -200,11 +201,12 @@ main {
 .view-display {
   background: var(--c5);
   margin: 0;
+  backdrop-filter: blur(3px);
 }
 #class-display-stack {
   width: 100%;
   overflow-x: scroll;
-  padding: 1rem;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
 }
@@ -235,6 +237,7 @@ main {
   overflow: scroll;
   flex-direction: column;
   padding: 2rem 0;
+  box-sizing: content-box;
 }
 #class-calendar-header {
   width: 80%;
@@ -352,7 +355,6 @@ main {
   border-radius: 1rem;
   overflow: hidden;
   border: .4rem solid var(--c2);
-  outline: var(--c6) 3px solid;
   box-shadow: -.3rem .3rem 1rem var(--c1);
   transition: translate .3s ease-out, box-shadow .3s ease-out;
 }
@@ -377,8 +379,6 @@ main {
 .class-card-top {
   -ms-overflow-style: none; 
   scrollbar-width: none;
-  border: var(--c6) 3px solid;
-  border-radius: 1rem;
   background: var(--c3);
   height: 12rem;
   width: 16rem;
