@@ -152,13 +152,9 @@ function shuffleArray(array) {
 			.slice(0, 50);
 		const wallpaperUrls = [];
 		for (let i = 1; i <= 5; i++) {
-			wallpaperUrls.concat(
-				(await (
-					await fetch("https://wallhaven.cc/api/v1/search?categories=110&page=" + i, { mode: "no-cors" })
-				).json())
-					.data
-					.map(imgData => imgData.path)
-			);
+			const res = await fetch("https://wallhaven.cc/api/v1/search?categories=110&page=" + i, { mode: "no-cors" });
+			const obj = await res.json();
+			wallpaperUrls.concat(obj.data.map(imgData => imgData.path));
 		}
 		
 		await Promise.all(
@@ -174,7 +170,8 @@ function shuffleArray(array) {
 		
 		const wallpapers = await Promise.all(
 		    wallpaperUrls.map(async wallpaperUrl => {
-		        const blob = await (await fetch(wallpaperUrl)).blob();
+			const res = await fetch(wallpaperUrl);
+		        const blob = await res.blob();
 		        return await new Promise(res => {
 		            const r = new FileReader();
 		            r.onload = () => res(r.result);
@@ -189,6 +186,6 @@ function shuffleArray(array) {
 		    document.documentElement.style.setProperty("--font-header", fonts[randNum(fonts.length - 1)][0]);
 		}
 	} catch(e) {
-		console.error(e)
+		console.error(e);
 	}
 })()
