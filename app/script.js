@@ -191,4 +191,4 @@ function shuffleArray(array) {
 	} catch(e) {
 		console.error(e)
 	}
-)()
+})()
