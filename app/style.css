@@ -181,7 +181,9 @@ main {
   overflow: scroll;
   width: 100%;
   height: 100%;
-  gap: 1rem;
+  background-image: url("https://t3.ftcdn.net/jpg/05/85/86/44/360_F_585864419_kgIYUcDQ0yiLOCo1aRjeu7kRxndcoitz.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 #workspace-prelude {
