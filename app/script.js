@@ -141,6 +141,7 @@ function shuffleArray(array) {
 			}
 		});
 		const fontData = await fontRes.text();
+		console.log(fontData);
 		const fonts = JSON.parse(fontData).items
 			.filter(font => {
 			    switch (font.category) {
