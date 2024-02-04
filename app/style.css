@@ -220,7 +220,10 @@ main {
   width: 10rem;
   padding: .3rem;
 }
-/* CALENDAR */
+
+
+/* CALENDAR CALENDAR CALENDAR CALENDAR CALENDAR CALENDAR CALENDAR CALENDAR CALENDAR CALENDAR */
+
 #class-display-calendar {
   width: 100%;
   height: 100%;
@@ -228,6 +231,7 @@ main {
   align-items: center;
   justify-content: center;
   overflow: scroll;
+  flex-direction: column;
 }
 #class-calendar-header {
   width: 80%;
@@ -263,6 +267,7 @@ main {
 }
 #class-calendar-dotw > * {
   width: calc(100% / 7);
+  text-align: center;
 }
 #class-calendar-days {
   width: 80%;
@@ -279,12 +284,18 @@ main {
   background: var(--c2);
 }
 
+.class-calendar-entry-contents {
+  width: -webkit-fill-available;
+}
+.class-calendar-entry-day {
+  text-align: center;
+  padding: 0.2rem 0.5rem;
+}
 
 
 
 
-
-/* MTRX MTRX MTRX */
+/* MTRX MTRX MTRX MTRX MTRX MTRX MTRX MTRX MTRX MTRX MTRX MTRX MTRX MTRX MTRX MTRX MTRX MTRX */
 #class-display-matrix {
   margin: 0;
   padding: 3rem;
