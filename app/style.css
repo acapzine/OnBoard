@@ -3,7 +3,7 @@
   --c2: rgb(160 160 160 / .6);
   --c3: rgb(200 200 200 / .5);
   --c4: rgb(240 240 240 / .4);
-  --c5: rgb(210 210 210 / .7);
+  --c5: rgb(210 210 210 / .55);
   --c6: rgb(0 0 0 / .6);
   /* body text */
   --ctext: rgb(46, 46, 46);
@@ -237,6 +237,9 @@ main {
   width: 10rem;
   padding: .3rem;
 }
+.class-stack-row:nth-child(2n + 1) {
+    background: var(--c4);
+}
 #class-stack-row-labels {
   padding-bottom: 0.5rem;
 }
@@ -251,7 +254,7 @@ main {
   justify-content: center;
   overflow: scroll;
   flex-direction: column;
-  padding: 2rem 0;
+  padding: 1rem 0;
   box-sizing: content-box;
 }
 #class-calendar-header {
