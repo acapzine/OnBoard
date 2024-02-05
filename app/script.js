@@ -133,7 +133,7 @@ function shuffleArray(array) {
 }
 
 const colorPicker = document.querySelector("#settings-bttn-color-picker");
-colorPicker.on("input", () => {
+colorPicker.addEventListener("input", () => {
 	document.body.style.backgroundImage = "";
 	document.body.style.backgroundColor = colorPicker.value;
 });
