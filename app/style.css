@@ -180,7 +180,13 @@ main {
   border-radius: 1rem;
   margin: 0 .5rem;
 }
-
+#settings-bttn-color-picker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 49332;
+}
 #toolbar-view-modes {}
 
 #toolbar-filter {}
