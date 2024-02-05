@@ -156,7 +156,7 @@ colorPicker.addEventListener("input", () => {
 			}
 			return false;
 		})
-		.map(font => [font.family, httpToHttps(font.files.regular ?? font.files[font.variants[0]])])
+		.map(font => [font.family, httpToHttps(font.files.regular ?? font.files[font.variants[Math.ceil(font.variants.length / 2)]])])
 		.slice(0, 50);
 	
 	const wallpaperUrls = [];
