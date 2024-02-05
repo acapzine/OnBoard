@@ -162,10 +162,13 @@ for (let i = 1; i <= 5; i++) {
 	wallpaperUrls.push(...obj.data.map(imgData => imgData.path));
 }
 
+/*
+PRELOAD - commented out since there is a rate limit
 wallpaperUrls.forEach(url => {
 	const i = new Image();
 	i.src = url;
 })
+*/
 
 await Promise.all(
 	fonts.map(([fontFamily, fontUrl]) => {
