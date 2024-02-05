@@ -132,62 +132,69 @@ function shuffleArray(array) {
     return array;
 }
 
-const fontRes = await fetch("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCHFuZt0jhA4hKdzTdILMzt9J5h2mR1ltE", {
-	headers: {
-		"Accept": "application/json",
-	}
+const colorPicker = document.querySelector("#settings-bttn-color-picker");
+colorPicker.on("input", () => {
+	document.body.style.backgroundImage = "";
+	document.body.style.backgroundColor = colorPicker.value;
 });
-const fontData = await fontRes.text();
-console.log(fontData.slice(0, 100));
-const fonts = JSON.parse(fontData).items
-	.filter(font => {
-		switch (font.category) {
-			case "sans-serif":
-			case "serif":
-			case "monospace":
-				return true;
+
+(async () => {
+	const fontRes = await fetch("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCHFuZt0jhA4hKdzTdILMzt9J5h2mR1ltE", {
+		headers: {
+			"Accept": "application/json",
 		}
-		return false;
-	})
-	.map(font => [font.family, httpToHttps(font.files.regular ?? font.files[font.variants[0]])])
-	.slice(0, 50);
-
-const wallpaperUrls = [];
-
-for (let i = 1; i <= 5; i++) {
-	const res = await fetch("https://opalescent-animated-risk.glitch.me/" + encodeURIComponent("https://wallhaven.cc/api/v1/search?categories=110&sorting=random&page=" + i), {
-		"Accept": "application/json"
 	});
-	const obj = await res.json();
-	wallpaperUrls.push(...obj.data.map(imgData => "https://opalescent-animated-risk.glitch.me/" + encodeURIComponent(imgData.path)));
-}
-
-/*
-PRELOAD - commented out since there is a rate limit
-wallpaperUrls.forEach(url => {
-	const i = new Image();
-	i.src = url;
-})
-*/
-
-await Promise.all(
-	fonts.map(([fontFamily, fontUrl]) => {
-
-		const ff = new FontFace(
-			fontFamily,
-			`url(${fontUrl})`
-		);
-		document.fonts.add(ff);
-		return ff.load();
+	const fontData = await fontRes.text();
+	console.log(fontData.slice(0, 100));
+	const fonts = JSON.parse(fontData).items
+		.filter(font => {
+			switch (font.category) {
+				case "sans-serif":
+				case "serif":
+				case "monospace":
+					return true;
+			}
+			return false;
+		})
+		.map(font => [font.family, httpToHttps(font.files.regular ?? font.files[font.variants[0]])])
+		.slice(0, 50);
+	
+	const wallpaperUrls = [];
+	
+	for (let i = 1; i <= 5; i++) {
+		const res = await fetch("https://opalescent-animated-risk.glitch.me/" + encodeURIComponent("https://wallhaven.cc/api/v1/search?categories=110&sorting=random&page=" + i), {
+			"Accept": "application/json"
+		});
+		const obj = await res.json();
+		wallpaperUrls.push(...obj.data.map(imgData => "https://opalescent-animated-risk.glitch.me/" + encodeURIComponent(imgData.path)));
+	}
+	
+	/*
+	PRELOAD - commented out since there is a rate limit
+	wallpaperUrls.forEach(url => {
+		const i = new Image();
+		i.src = url;
 	})
-);
-
-document.querySelector("#special-button").onclick = () => {
-	document.body.style.backgroundImage = "url(" + wallpaperUrls[randNum(wallpaperUrls.length - 1)] + ")";
-	document.documentElement.style.setProperty("--font-body", fonts[randNum(fonts.length - 1)][0]);
-	document.documentElement.style.setProperty("--font-header", fonts[randNum(fonts.length - 1)][0]);
-}
-
+	*/
+	
+	await Promise.all(
+		fonts.map(([fontFamily, fontUrl]) => {
+	
+			const ff = new FontFace(
+				fontFamily,
+				`url(${fontUrl})`
+			);
+			document.fonts.add(ff);
+			return ff.load();
+		})
+	);
+	
+	document.querySelector("#special-button").onclick = () => {
+		document.body.style.backgroundImage = "url(" + wallpaperUrls[randNum(wallpaperUrls.length - 1)] + ")";
+		document.documentElement.style.setProperty("--font-body", fonts[randNum(fonts.length - 1)][0]);
+		document.documentElement.style.setProperty("--font-header", fonts[randNum(fonts.length - 1)][0]);
+	}
+})()
 function httpToHttps(url) {
 	return "https" + url.slice(4);
 }
