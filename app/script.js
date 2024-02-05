@@ -155,11 +155,11 @@ const fonts = JSON.parse(fontData).items
 const wallpaperUrls = [];
 
 for (let i = 1; i <= 5; i++) {
-	const res = await fetch("https://opalescent-animated-risk.glitch.me/categories=110&sorting=random&page=" + i, {
+	const res = await fetch("https://opalescent-animated-risk.glitch.me/" + encodeURIComponent("https://wallhaven.cc/api/v1/search?categories=110&sorting=random&page=" + i), {
 		"Accept": "application/json"
 	});
 	const obj = await res.json();
-	wallpaperUrls.push(...obj.data.map(imgData => imgData.path));
+	wallpaperUrls.push(...obj.data.map(imgData => "https://opalescent-animated-risk.glitch.me/" + encodeURIComponent(imgData.path)));
 }
 
 /*
