@@ -1,11 +1,11 @@
 :root {
   --c1: rgb(90 90 90 / .6);
   --c2: rgb(140 140 140 / .65);
-  --c3: rgb(240 240 240 / 0.1);
+  --c3: rgb(240 240 240 / 0.15);
   --c4: rgb(220 220 220 / .15);
   --c5: rgb(180 180 180 / .55);
   --c6: rgb(90 90 90 / .35);
-  --c7: rgb(80 80 80 / .18);
+  --c7: rgb(80 80 80 / .38);
   
   /* body text */
   --ctext: rgb(46, 46, 46);
@@ -222,7 +222,7 @@ main {
 .view-display {
   background: var(--c5);
   margin: 0;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(1px);
 }
 #class-display-stack {
   width: 100%;
@@ -246,7 +246,7 @@ main {
   padding: .3rem;
 }
 .class-stack-row:nth-child(2n + 1) {
-    background: var(--c4);
+    background: var(--c3);
 }
 #class-stack-row-labels {
   padding-bottom: 0.5rem;
@@ -375,7 +375,6 @@ main {
 .class-card {
   min-width: 16rem;
   min-height: 14rem;
-  background: var(--c2);
   position: relative;
   display: flex;
   flex-direction: column;
